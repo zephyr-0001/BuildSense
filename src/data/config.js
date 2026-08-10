@@ -1,7 +1,7 @@
-window.BuildSenseConfig = {
+export const BuildSenseConfig = {
     packages: [
         {
-            id: "freedom_plus",
+            id: "sense_essential",
             name: "Sense Essential",
             description: "A perfect blend of affordability and structural integrity, delivering branded components and core interior fittings.",
             displayStartingRate: 2349,
@@ -160,7 +160,7 @@ window.BuildSenseConfig = {
             }
         },
         {
-            id: "luxury",
+            id: "sense_prime",
             name: "Sense Prime",
             description: "A sophisticated construction plan featuring high-end finishes, detailed 3D modeling, and premium-grade building materials.",
             displayStartingRate: 2370,
@@ -315,7 +315,7 @@ window.BuildSenseConfig = {
             }
         },
         {
-            id: "luxury_plus",
+            id: "sense_elite",
             name: "Sense Elite",
             description: "Elevated luxury living with 11-foot ceilings, top-tier Fenesta windows, and smart-home ready infrastructure.",
             displayStartingRate: 2550,
@@ -467,7 +467,7 @@ window.BuildSenseConfig = {
             }
         },
         {
-            id: "the_one_plus",
+            id: "sense_signature",
             name: "Sense Signature",
             description: "The absolute pinnacle of luxury construction, offering expansive spaces, designer elevations, and opulent interior integrations.",
             displayStartingRate: 3099,
