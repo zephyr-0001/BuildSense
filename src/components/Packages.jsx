@@ -6,7 +6,8 @@ export default function Packages({ navigateTo, config }) {
       <div className="container section">
         <div className="text-center">
           <h2 className="section-title">Our Construction Packages</h2>
-          <p className="section-subtitle">Choose from our curated selection of premium construction packages designed to fit your needs and budget.</p>
+          <p className="section-subtitle" style={{marginBottom: '0.5rem'}}>Choose from our curated selection of premium construction packages designed to fit your needs and budget.</p>
+          <p style={{fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '3rem', fontStyle: 'italic'}}>*Please note: Interior works are not included as part of these construction packages.</p>
         </div>
         <div className="packages-grid">
           {config.packages.map((pkg) => (

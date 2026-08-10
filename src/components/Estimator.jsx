@@ -16,6 +16,9 @@ export default function Estimator({ config }) {
   const [leadEmail, setLeadEmail] = useState('');
   const [leadError, setLeadError] = useState(false);
   const [leadSuccess, setLeadSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [feedback, setFeedback] = useState('');
 
   useEffect(() => {
     const savedPkg = localStorage.getItem('selectedPackage');
@@ -58,26 +61,40 @@ export default function Estimator({ config }) {
   }
 
   // Handle lead submission
-  const handleLeadSubmit = (e) => {
+  const handleLeadSubmit = async (e) => {
     e.preventDefault();
     if (!leadPhone.trim() && !leadEmail.trim()) {
       setLeadError(true);
       return;
     }
     setLeadError(false);
+    setIsSubmitting(true);
     
     const form = e.target;
     const formData = new FormData(form);
 
-    fetch(form.action, {
-      method: 'POST',
-      body: formData
-    })
-    .then(() => setLeadSuccess(true))
-    .catch(err => {
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData
+      });
+
+      let result = {};
+      try {
+        result = await response.json();
+      } catch (e) {}
+
+      if (response.ok) {
+        setLeadSuccess(true);
+      } else {
+        throw new Error(result.message || 'Network response was not ok');
+      }
+    } catch (err) {
       console.error(err);
-      alert('Error submitting form. Please try again.');
-    });
+      alert('Error submitting form: ' + err.message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const floorBreakdownText = activeTab === 'quick' 
@@ -85,6 +102,20 @@ export default function Estimator({ config }) {
     : floors.filter(f => (parseFloat(f.length) || 0) > 0 && (parseFloat(f.width) || 0) > 0)
             .map(f => `- ${f.type}: ${f.length}ft x ${f.width}ft = ${(parseFloat(f.length) || 0) * (parseFloat(f.width) || 0)} sqft`)
             .join('\n');
+
+  let packageDetailsText = '';
+  if (pkg) {
+    packageDetailsText += "KEY FEATURES:\n";
+    packageDetailsText += pkg.features.map(f => `- ${f}`).join('\n');
+    packageDetailsText += "\n\nDETAILED SPECIFICATIONS:\n";
+    if (pkg.detailedSections) {
+      Object.entries(pkg.detailedSections).forEach(([key, items]) => {
+        const sectionName = key.replace(/([A-Z])/g, ' $1').trim().toUpperCase();
+        packageDetailsText += `\n[${sectionName}]\n`;
+        packageDetailsText += items.map(item => `- ${item}`).join('\n');
+      });
+    }
+  }
 
   return (
     <section id="page-estimator" className="page-section active">
@@ -187,6 +218,7 @@ export default function Estimator({ config }) {
               <div className="quote-note">
                 *Inclusive of all applicable GST.<br/>
                 *Government charges like BESCOM, BWSSB, Borewell etc. will be additional and paid by the client.<br/>
+                *Please note: Interior works are not included as part of these packages.<br/>
                 *These estimate charges are subject to final discussion, agreement etc.
               </div>
 
@@ -199,10 +231,6 @@ export default function Estimator({ config }) {
                   
                   <form onSubmit={handleLeadSubmit} action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="6452b31a-d5ee-4cd1-bbdd-a02db74b3e97" />
-                    <input type="hidden" name="Estimate_Package" value={pkg.name} />
-                    <input type="hidden" name="Estimate_Area" value={`${totalArea} sqft`} />
-                    <input type="hidden" name="Estimate_Total" value={`₹${Math.round(totalCost).toLocaleString('en-IN')}`} />
-                    <textarea name="Floor_Breakdown" style={{display: 'none'}} value={floorBreakdownText} readOnly />
                     
                     <div className="input-group">
                       <label>Name *</label>
@@ -223,7 +251,46 @@ export default function Estimator({ config }) {
                         Please provide either a Phone number or an Email address.
                       </div>
                     )}
-                    <button type="submit" className="btn btn-primary" style={{width: '100%'}}>Request Consultation</button>
+
+                    <div style={{marginTop: '1.5rem', marginBottom: '1.5rem', padding: '1rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '0.75rem', border: '1px solid var(--color-border)'}}>
+                      <label style={{display: 'block', marginBottom: '0.75rem', fontWeight: 500}}>How was your experience with our estimator?</label>
+                      <div style={{display: 'flex', gap: '0.5rem', marginBottom: rating > 0 ? '1rem' : '0'}}>
+                        {[1, 2, 3, 4, 5].map(star => (
+                          <svg 
+                            key={star} 
+                            onClick={() => setRating(star)}
+                            style={{width: '28px', height: '28px', cursor: 'pointer', fill: star <= rating ? '#fbbf24' : '#e5e7eb', transition: 'fill 0.2s'}}
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      
+                      {rating > 0 && (
+                        <textarea 
+                          className="form-control" 
+                          placeholder="Your message" 
+                          rows="2"
+                          value={feedback}
+                          onChange={e => setFeedback(e.target.value)}
+                          name="Experience_Feedback"
+                          style={{marginBottom: '0'}}
+                        />
+                      )}
+                      <input type="hidden" name="Experience_Rating" value={rating > 0 ? `${rating} Stars` : 'No rating given'} />
+                    </div>
+
+                    {/* Hidden Fields Placed Here So They Appear Below Feedback In Email */}
+                    <input type="hidden" name="Estimate_Package" value={pkg.name} />
+                    <input type="hidden" name="Estimate_Area" value={`${totalArea} sqft`} />
+                    <input type="hidden" name="Estimate_Total" value={`₹${Math.round(totalCost).toLocaleString('en-IN')}`} />
+                    <textarea name="Floor_Breakdown" style={{display: 'none'}} value={floorBreakdownText} readOnly />
+                    <textarea name="Package_Specifications" style={{display: 'none'}} value={packageDetailsText} readOnly />
+
+                    <button type="submit" className="btn btn-primary" style={{width: '100%'}} disabled={isSubmitting}>
+                      {isSubmitting ? 'Sending Request...' : 'Request Consultation'}
+                    </button>
                   </form>
                 </div>
               )}

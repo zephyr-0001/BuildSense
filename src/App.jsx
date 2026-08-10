@@ -46,9 +46,7 @@ function App() {
             </div>
             <div className="footer-col">
               <h4>Contact Us</h4>
-              <p>📞 +91 98765 43210</p>
-              <p>✉️ info@buildsense.com</p>
-              <p>🏢 123 Construction Hub, New Delhi</p>
+              <p>✉️ buildwithsense@gmail.com</p>
             </div>
             <div className="footer-col">
               <h4>Quick Links</h4>
