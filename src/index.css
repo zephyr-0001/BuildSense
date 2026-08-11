@@ -210,21 +210,34 @@ ul {
 
 .hero-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .hero-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 4rem;
+  }
 }
 
 .hero-visual {
   flex: 1;
-  display: none;
-  justify-content: flex-end;
-  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
 }
 
 @media (min-width: 900px) {
   .hero-visual {
-    display: flex;
+    justify-content: flex-end;
+    max-width: 500px;
   }
 }
 
