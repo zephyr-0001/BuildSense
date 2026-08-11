@@ -120,7 +120,56 @@ export default function Estimator({ config }) {
   return (
     <section id="page-estimator" className="page-section active">
       <div className="container section">
-        <div className="text-center">
+        <div className="text-center" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+          <div className="estimator-visual" style={{marginBottom: '1rem'}}>
+            <svg viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg" className="blueprint-anim" style={{height: '220px', maxWidth: '100%'}}>
+              {/* Abstract grid background */}
+              <path d="M50 50 L50 250 M150 50 L150 250 M250 50 L250 250 M350 50 L350 250 M450 50 L450 250" stroke="rgba(249,115,22,0.1)" strokeWidth="1" strokeDasharray="4 4" />
+              <path d="M50 50 L450 50 M50 150 L450 150 M50 250 L450 250" stroke="rgba(249,115,22,0.1)" strokeWidth="1" strokeDasharray="4 4" />
+              
+              {/* Desk Line */}
+              <path d="M20 250 L480 250" stroke="var(--color-text-main)" strokeWidth="4" strokeLinecap="round" className="anim-path" />
+              
+              {/* Big Calculator on Desk (Right) */}
+              <rect x="300" y="100" width="120" height="150" rx="10" stroke="var(--color-accent)" strokeWidth="4" className="anim-path delay-1" />
+              <rect x="315" y="120" width="90" height="30" rx="4" stroke="rgba(249,115,22,0.4)" strokeWidth="2" className="anim-path delay-2" />
+              {/* Buttons */}
+              <circle cx="330" cy="170" r="5" fill="var(--color-accent)" className="anim-fade delay-3" />
+              <circle cx="360" cy="170" r="5" fill="var(--color-accent)" className="anim-fade delay-4" />
+              <circle cx="390" cy="170" r="5" fill="var(--color-accent)" className="anim-fade delay-5" />
+              <circle cx="330" cy="200" r="5" fill="var(--color-accent)" className="anim-fade delay-3" />
+              <circle cx="360" cy="200" r="5" fill="var(--color-accent)" className="anim-fade delay-4" />
+              <circle cx="390" cy="200" r="5" fill="var(--color-accent)" className="anim-fade delay-5" />
+              <circle cx="330" cy="230" r="5" fill="var(--color-accent)" className="anim-fade delay-3" />
+              <circle cx="360" cy="230" r="5" fill="var(--color-accent)" className="anim-fade delay-4" />
+              <circle cx="390" cy="230" r="5" fill="var(--color-accent)" className="anim-fade delay-5" />
+              
+              {/* Graph/Chart on desk in middle */}
+              <rect x="180" y="180" width="90" height="70" stroke="rgba(249,115,22,0.3)" strokeWidth="3" className="anim-path delay-1" />
+              <path d="M190 230 L210 200 L230 215 L260 190" stroke="var(--color-accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="anim-path delay-2" />
+              
+              {/* Person Sitting at Desk (Left) */}
+              <g transform="translate(0, 55)">
+                {/* Head */}
+                <circle cx="120" cy="100" r="30" stroke="var(--color-text-main)" strokeWidth="4" className="anim-path delay-2" />
+                
+                {/* Thinking Bubbles */}
+                <circle cx="150" cy="65" r="4" stroke="var(--color-accent)" strokeWidth="2" fill="none" className="anim-fade delay-3" />
+                <circle cx="170" cy="45" r="7" stroke="var(--color-accent)" strokeWidth="2" fill="none" className="anim-fade delay-4" />
+                
+                {/* Thought Cloud */}
+                <path d="M 190 40 C 190 20, 220 15, 230 30 C 250 10, 290 20, 280 45 C 300 55, 290 80, 270 75 C 260 90, 210 90, 200 75 C 180 75, 180 50, 190 40 Z" stroke="var(--color-accent)" strokeWidth="3" fill="none" className="anim-path delay-5" />
+              </g>
+              
+              {/* Body (Back leaning over desk) */}
+              <path d="M80 250 C80 160, 160 160, 160 250" stroke="var(--color-text-main)" strokeWidth="4" fill="none" className="anim-path delay-3" />
+              
+              {/* Floating Math Symbols */}
+              <path d="M 330 60 L 350 60 M 340 50 L 340 70" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" className="anim-fade delay-1" /> {/* Plus */}
+              <path d="M 430 120 L 445 120 M 430 125 L 445 125" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" className="anim-fade delay-3" /> {/* Equals */}
+              <path d="M 400 70 L 415 85 M 415 70 L 400 85" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" className="anim-fade delay-5" /> {/* Multiply */}
+            </svg>
+          </div>
           <h2 className="section-title">Cost Estimator</h2>
           <p className="section-subtitle">Get an instant, transparent quote for your project based on your requirements.</p>
         </div>
