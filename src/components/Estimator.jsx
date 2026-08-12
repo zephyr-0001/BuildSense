@@ -353,7 +353,7 @@ export default function Estimator({ config }) {
 
                     <div style={{marginTop: '1.5rem', marginBottom: '1.5rem', padding: '1rem', background: 'var(--color-surface)', borderRadius: '0.75rem', border: '1px solid var(--color-border)'}}>
                       <label style={{display: 'block', marginBottom: '0.75rem', fontWeight: 500, lineHeight: 1.4}}>
-                        How was your experience with our <span style={{ color: 'var(--color-text-main)', fontWeight: 700 }}>Build</span><span style={{ color: 'var(--color-accent)', fontWeight: 700 }}>Sense</span> Estimator?
+                        How was your experience with our <span style={{ color: 'var(--color-text-main)', fontWeight: 700 }}>Build</span> <span style={{ color: 'var(--color-accent)', fontWeight: 700 }}>Sense</span> Estimator?
                       </label>
                       <div style={{display: 'flex', gap: '0.5rem', marginBottom: rating > 0 ? '1rem' : '0'}}>
                         {[1, 2, 3, 4, 5].map(star => (
