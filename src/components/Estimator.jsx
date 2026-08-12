@@ -266,7 +266,7 @@ export default function Estimator({ config }) {
                 </div>
               </div>
               <div className="quote-note">
-                <strong style={{color: 'var(--color-accent)'}}>*All prices mentioned are exclusive of GST. GST will be charged additionally as applicable.</strong><br/>
+                <strong style={{color: 'var(--color-accent)'}}>*All prices mentioned are exclusive of GST.</strong><br/>
                 *Government charges like BESCOM, BWSSB, Borewell etc. will be additional and paid by the client.<br/>
                 *Please note: Interior works are not included as part of these packages.<br/>
                 *These estimate charges are subject to final discussion, agreement etc.
