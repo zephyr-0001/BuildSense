@@ -172,6 +172,7 @@ export default function Estimator({ config }) {
           </div>
           <h2 className="section-title">Cost Estimator</h2>
           <p className="section-subtitle">Get an instant, transparent quote for your project based on your requirements.</p>
+          <p style={{fontSize: '0.875rem', color: 'var(--color-accent)', marginTop: '0.5rem', fontWeight: '600'}}>⚠️ All prices mentioned are exclusive of GST.</p>
         </div>
 
         <div className="estimator-wrapper">
@@ -260,12 +261,12 @@ export default function Estimator({ config }) {
                   <span>{pkg ? pkg.name : '-'}</span>
                 </div>
                 <div className="quote-row">
-                  <span>Package Rate</span>
+                  <span>Package Rate (excl. GST)</span>
                   <span>{pkg ? `₹${pkg.displayStartingRate.toLocaleString('en-IN')} / sqft` : '-'}</span>
                 </div>
               </div>
               <div className="quote-note">
-                *Inclusive of all applicable GST.<br/>
+                <strong style={{color: 'var(--color-accent)'}}>*All prices mentioned are exclusive of GST. GST will be charged additionally as applicable.</strong><br/>
                 *Government charges like BESCOM, BWSSB, Borewell etc. will be additional and paid by the client.<br/>
                 *Please note: Interior works are not included as part of these packages.<br/>
                 *These estimate charges are subject to final discussion, agreement etc.

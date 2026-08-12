@@ -61,7 +61,7 @@ function PackageCard({ pkg, navigateTo }) {
     <div className="package-card">
       <div className="package-name">{pkg.name}</div>
       <div className="package-desc">{pkg.description}</div>
-      <div className="package-price">₹{pkg.displayStartingRate.toLocaleString('en-IN')} <span>/ sqft (incl. GST)</span></div>
+      <div className="package-price">₹{pkg.displayStartingRate.toLocaleString('en-IN')} <span>/ sqft (excl. GST)</span></div>
       
       <PackageDetails pkg={pkg} />
       

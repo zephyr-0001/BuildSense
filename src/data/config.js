@@ -4,12 +4,11 @@ export const BuildSenseConfig = {
             id: "sense_essential",
             name: "Sense Essential",
             description: "A perfect blend of affordability and structural integrity, delivering branded components and core interior fittings.",
-            displayStartingRate: 2349,
-            internalRatePerSqft: 2349,
+            displayStartingRate: 2500,
+            internalRatePerSqft: 2500,
             features: [
                 "Generous 10'6\" ceiling clearance",
-                "Essential modular kitchen & bedroom wardrobes",
-                "High-strength 500 TMT steel reinforcement",
+                "High-strength Fe-500 TMT steel reinforcement",
                 "Weather-proof UPVC windows"
             ],
             detailedSections: {
@@ -18,18 +17,17 @@ export const BuildSenseConfig = {
                     "Engaging 3D exterior visualizations",
                     "Maximum of three layout adjustments",
                     "Interior 3D perspectives for key rooms",
-                    "Initial site assessment and dimensional mapping",
-                    "Professional surveyor-led topographical inspection",
-                    "Fundamental Virtual Reality model experience"
+                    "Initial site assessment and dimensional mapping"
                 ],
                 "Civil & Structural Framework": [
                     "Floor-to-ceiling clearance of 10 feet 6 inches",
-                    "Premium steel reinforcement (Bhuwalka or Kamadhenu 500 TMT)",
+                    "Premium steel reinforcement (Meenakshi or Kamadhenu Fe-500 TMT)",
                     "Top-tier Grade 53 cement (ACC, Penna, or Dalmia)",
-                    "8000-liter solid-block underground water reservoir with leak-proof plaster",
-                    "Factory-mixed M25 grade concrete",
+                    "8000-liter solid-block underground sump with leak-proof plaster",
+                    "RMC- M25 grade concrete",
                     "Sturdy solid concrete block masonry (6-inch and 4-inch profiles)",
-                    "Reinforced joints using chicken mesh and double-washed manufactured sand",
+                    "Reinforced joints using chicken mesh",
+                    "Double-washed manufactured sand",
                     "Exterior weather-proofing applied via Dr.Fixit or FOSROC",
                     "Comprehensive cement-based terrace leak prevention",
                     "Built-in ledge walls for concealing sanitary plumbing",
@@ -41,26 +39,9 @@ export const BuildSenseConfig = {
                     "Cross-section and building elevation drafts",
                     "Complete post-completion project portfolio"
                 ],
-                "Interior Woodwork & Finishes": [
-                    "Kitchen surfaces: High-quality laminate over boiling-water-proof plywood",
-                    "General cabinetry: Laminate-finished neem plywood",
-                    "One full-height wardrobe allocation per 1000 sq.ft. of slab area",
-                    "Custom modular kitchen prep (up to 125 sq.ft) with premium accessories",
-                    "Dedicated 35 sq.ft television and entertainment unit",
-                    "Compact 10 sq.ft entryway footwear storage",
-                    "Elegant 7'x3' dining area crockery cabinet",
-                    "Decorative false ceiling applications up to 100 sq.ft.",
-                    "Master suite vanity mirror and dressing station",
-                    "Up to 10 running feet of decorative display ledges",
-                    "200 sq.ft of premium wallpaper application",
-                    "One washroom vanity basin unit per 1000 sq.ft.",
-                    "Integrated electrical wiring for false ceiling lights"
-                ],
                 "Engineering & Analysis": [
                     "IS Code compliant structural engineering framework",
-                    "Execution-ready structural blueprints",
-                    "Comprehensive soil bearing capacity analysis",
-                    "In-depth structural integrity and load report"
+                    "Execution-ready structural Drawings"
                 ],
                 "Utility System Design": [
                     "Complete electrical and switching routing plan",
@@ -89,7 +70,7 @@ export const BuildSenseConfig = {
                 "Paints & Coatings": [
                     "Interiors: Double putty coat, primer base, and premium Tractor Shine finish",
                     "Exteriors: Primer base paired with dual-layer Apex weather-resistant coating",
-                    "Trusted paint brands: Asian Paints, Berger, or Dulux"
+                    "Trusted paint brands: Asian Paints, Berger, or Nippo"
                 ],
                 "Electrical Systems": [
                     "Customized lighting and power socket distribution",
@@ -139,6 +120,7 @@ export const BuildSenseConfig = {
                 ],
                 "Important Exclusions": [
                     "Design revisions exceeding the standard limit will incur design fees",
+                    "Interior wood works are not part of this package",
                     "Government and statutory liaison charges are direct client expenses",
                     "Municipal plan sanctioning fees are paid by the property owner",
                     "Elevating the ground level beyond 18 inches will be billed extra",
@@ -149,7 +131,6 @@ export const BuildSenseConfig = {
                     "Client must arrange temporary water and power for the construction crew",
                     "Foundation depths extending beyond 5 feet are additionally charged",
                     "Logistic hurdles for narrow road material delivery billed on actuals",
-                    "Site storage and labour sheds must be accommodated by the client",
                     "Municipal road cutting deposits are excluded from this estimate"
                 ],
                 "Warranties Provided": [
@@ -163,10 +144,10 @@ export const BuildSenseConfig = {
             id: "sense_prime",
             name: "Sense Prime",
             description: "A sophisticated construction plan featuring high-end finishes, detailed 3D modeling, and premium-grade building materials.",
-            displayStartingRate: 2370,
-            internalRatePerSqft: 2370,
+            displayStartingRate: 2750,
+            internalRatePerSqft: 2750,
             features: [
-                "Advanced 2D/3D layouts paired with VR",
+                "Advanced 2D/3D layouts",
                 "Authentic Italian marble or large-format vitrified flooring",
                 "Top-tier JSW/SAIL/Vizag steel reinforcements",
                 "Pre-wired for modern home automation"
@@ -175,7 +156,7 @@ export const BuildSenseConfig = {
                 "Architectural Planning": [
                     "High-end 2D floor layouts and comprehensive 3D models",
                     "Detailed exterior visual renders for all facades",
-                    "Generous allowance of up to forty design iterations",
+                    "Generous allowance of design iterations",
                     "Immersive isometric room-by-room perspectives",
                     "Bespoke landscaping and hardscape blueprints",
                     "Fully interactive 3D virtual home walkthroughs",
@@ -185,9 +166,9 @@ export const BuildSenseConfig = {
                 ],
                 "Civil & Structural Framework": [
                     "Spacious floor-to-ceiling heights of 10 feet 6 inches",
-                    "Elite steel reinforcement (JSW, SAIL, or Vizag 500 TMT)",
+                    "Elite steel reinforcement (JSW, SAIL, or Vizag Fe-500 TMT)",
                     "Grade 53 cement sourced from ACC or Ultratech",
-                    "8000-liter RCC underground reservoir with waterproof lining",
+                    "8000-liter RCC underground sump with waterproof lining",
                     "High-grade M25 ready-mix concrete",
                     "Precision machine-cut solid blocks (6-inch and 4-inch)",
                     "Custom architectural elements including courtyards and skylights",
@@ -199,7 +180,7 @@ export const BuildSenseConfig = {
                 ],
                 "Drafting & Documentation": [
                     "Extensive working drafts covering every construction phase",
-                    "Detailed opening schedules for doors and fenestration",
+                    "Detailed opening schedules for doors and fenestration (windows)",
                     "Cross-section and precise building elevation blueprints",
                     "Curated post-completion handover portfolio"
                 ],
@@ -211,7 +192,7 @@ export const BuildSenseConfig = {
                 "Engineering & Analysis": [
                     "Rigorous structural engineering as per national IS standards",
                     "Flawless good-for-construction foundational drawings",
-                    "Comprehensive geotechnical soil test reports",
+                    "Comprehensive geotechnical soil test reports, if required on site condition",
                     "Integrated overlapping of structural, architectural, and MEP plans",
                     "3D structural stress-test and analysis documentation"
                 ],
@@ -295,7 +276,8 @@ export const BuildSenseConfig = {
                     "Fully plastered and finished with exterior-grade paint"
                 ],
                 "Important Exclusions": [
-                    "Design modifications exceeding 40 iterations will incur fees",
+                    "Design modifications exceeding iterations will incur extra fees",
+                    "Interior wood works will not be part of package",
                     "Government and statutory liaison charges are direct client expenses",
                     "Municipal plan sanctioning fees are paid by the property owner",
                     "Elevating the ground level beyond 18 inches will be billed extra",
@@ -318,8 +300,8 @@ export const BuildSenseConfig = {
             id: "sense_elite",
             name: "Sense Elite",
             description: "Elevated luxury living with 11-foot ceilings, top-tier Fenesta windows, and smart-home ready infrastructure.",
-            displayStartingRate: 2550,
-            internalRatePerSqft: 2550,
+            displayStartingRate: 3000,
+            internalRatePerSqft: 3000,
             features: [
                 "Expanded 11-foot vertical floor clearances",
                 "High-end UPVC Fenesta window systems",
@@ -328,7 +310,7 @@ export const BuildSenseConfig = {
             ],
             detailedSections: {
                 "Architectural Planning": [
-                    "Elite-tier 2D spatial planning and 3D architectural models",
+                    "Elite-tier 2D spatial planning and 3D architectural views",
                     "Comprehensive exterior facade renders for all viewing angles",
                     "Generous allowance of up to forty design revision cycles",
                     "Immersive isometric room-by-room perspectives with realistic lighting",
@@ -340,9 +322,9 @@ export const BuildSenseConfig = {
                 ],
                 "Civil & Structural Framework": [
                     "Grand floor-to-ceiling vertical clearances of 11 feet",
-                    "Elite steel reinforcement (JSW, SAIL, or Vizag 500 TMT)",
+                    "Elite steel reinforcement (JSW, SAIL, or Vizag Fe-500 TMT)",
                     "Grade 53 cement sourced from ACC or Ultratech",
-                    "Custom-sized RCC underground reservoir tailored to occupancy",
+                    "Custom-sized RCC underground sump tailored to occupancy",
                     "High-grade M25 ready-mix concrete formulations",
                     "Heavy-duty machine-cut solid blocks (8-inch and 4-inch variants)",
                     "Custom architectural elements including courtyards and skylights",
@@ -398,7 +380,7 @@ export const BuildSenseConfig = {
                 "Paints & Coatings": [
                     "Interiors: Triple putty layer, single primer, and multiple coats of premium emulsion",
                     "Exteriors: Primer base paired with two coats of Apex weatherproof shield",
-                    "Preferred premium brands: Asian Paints, Berger, or Dulux"
+                    "Preferred premium brands: Asian Paints, Berger, Dulux, or Nippo paint"
                 ],
                 "Electrical Systems": [
                     "Ample lighting and power sockets tailored to bespoke client needs",
@@ -448,7 +430,7 @@ export const BuildSenseConfig = {
                     "Fully plastered and finished with exterior-grade paint"
                 ],
                 "Important Exclusions": [
-                    "Design modifications exceeding 40 iterations will incur fees",
+                    "Design modifications exceeding iterations will incur fees",
                     "Government and statutory liaison charges are direct client expenses",
                     "Municipal plan sanctioning fees are paid by the property owner",
                     "Elevating the ground level beyond 18 inches will be billed extra",
@@ -470,8 +452,8 @@ export const BuildSenseConfig = {
             id: "sense_signature",
             name: "Sense Signature",
             description: "The absolute pinnacle of luxury construction, offering expansive spaces, designer elevations, and opulent interior integrations.",
-            displayStartingRate: 3099,
-            internalRatePerSqft: 3099,
+            displayStartingRate: 3500,
+            internalRatePerSqft: 3500,
             features: [
                 "Grand 11'6\" ceiling clearances",
                 "Extensive premium interior woodwork included",
@@ -495,7 +477,7 @@ export const BuildSenseConfig = {
                     "Palatial floor-to-ceiling vertical clearances of 11 feet 6 inches",
                     "Top-tier steel reinforcement (JSW or TATA 500 TMT)",
                     "Grade 53 cement sourced exclusively from ACC or Ultratech",
-                    "Custom-sized RCC underground reservoir tailored to exact occupancy",
+                    "Custom-sized RCC underground sump tailored to exact occupancy",
                     "High-grade M25 ready-mix concrete formulations",
                     "Heavy-duty machine-cut solid blocks (8-inch and 4-inch variants)",
                     "Anti-crack chicken mesh plastering utilizing double-washed manufactured sand",
@@ -511,27 +493,6 @@ export const BuildSenseConfig = {
                     "Detailed opening schedules for all doors and architectural fenestration",
                     "Cross-section and precise building elevation blueprints",
                     "Curated post-completion handover photography and portfolio"
-                ],
-                "Interior Woodwork & Finishes": [
-                    "Kitchen surfaces: Premium acrylic sheets on boiling-water-proof plywood",
-                    "Wardrobes: Century plywood overlaid with hand-polished 4mm veneer",
-                    "General interiors: Century plywood featuring high-end laminate finishes",
-                    "One custom wardrobe per 1000 sq.ft. of slab area (including loft)",
-                    "Lavish modular kitchen (up to 150 sq.ft) with premium culinary accessories",
-                    "Expansive 40 sq.ft television and entertainment unit with storage",
-                    "Spacious 15 sq.ft entryway footwear storage with tall cabinets",
-                    "Elegant 3'6\"x7' dining crockery cabinet featuring glass shutters",
-                    "Elaborate decorative false ceilings up to 144 sq.ft.",
-                    "Dedicated foyer display unit up to 15 sq.ft.",
-                    "Master suite vanity mirror and dressing station",
-                    "Up to 20 running feet of decorative display ledges",
-                    "200 sq.ft of premium wallpaper application",
-                    "Veneer wall partitions applied up to 50 sq.ft.",
-                    "Custom storage units integrated into the puja space",
-                    "Luxurious headboard tufting in the master bedroom",
-                    "Dedicated study table layouts up to 30 sq.ft.",
-                    "Custom vanity basin units for every washroom",
-                    "Integrated electrical wiring for all false ceiling lighting"
                 ],
                 "Engineering & Analysis": [
                     "Rigorous structural engineering as per national IS safety standards",
@@ -611,7 +572,7 @@ export const BuildSenseConfig = {
                     "Seamless pocket windows and sliding glass doors included"
                 ],
                 "Metal Fabrication": [
-                    "Custom-crafted designer main property gate with Shera board highlights",
+                    "Custom-crafted designer main property gate with HPL board highlights",
                     "Mild steel safety railings for external stairs and balconies",
                     "Polished stainless steel railings for interior staircases",
                     "Utility and balcony areas receive built-in waterproofing"
@@ -630,7 +591,7 @@ export const BuildSenseConfig = {
                     "Hard rock or complex soil excavation is billed separately",
                     "Debris removal and fresh earth purchases are charged on actuals",
                     "Market fluctuations exceeding 45% on raw materials adjusted collaboratively",
-                    "Door and window areas are capped at 27% of total built-up space",
+                    "Door and window areas are capped at 30% of total built-up space",
                     "Client must arrange temporary water and power for the construction crew",
                     "Foundation depths extending beyond 5 feet are additionally charged"
                 ],
