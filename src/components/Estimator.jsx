@@ -208,7 +208,7 @@ export default function Estimator({ config }) {
                   ))}
                 </select>
                 {pkg && (
-                  <div style={{ marginTop: '1rem', padding: '1.25rem', border: '1px solid var(--color-border)', borderRadius: '0.75rem', background: 'rgba(255, 255, 255, 0.02)' }}>
+                  <div style={{ marginTop: '1rem', padding: '1.25rem', border: '1px solid var(--color-border)', borderRadius: '0.75rem', background: 'var(--color-surface)' }}>
                     <h4 style={{ marginBottom: '0.5rem' }}>
                       <FormattedPackageName name={pkg.name} index={pkgIndex} /> Details
                     </h4>
@@ -350,7 +350,7 @@ export default function Estimator({ config }) {
                       </div>
                     )}
 
-                    <div style={{marginTop: '1.5rem', marginBottom: '1.5rem', padding: '1rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '0.75rem', border: '1px solid var(--color-border)'}}>
+                    <div style={{marginTop: '1.5rem', marginBottom: '1.5rem', padding: '1rem', background: 'var(--color-surface)', borderRadius: '0.75rem', border: '1px solid var(--color-border)'}}>
                       <label style={{display: 'block', marginBottom: '0.75rem', fontWeight: 500, lineHeight: 1.4}}>
                         How was your experience with our <span style={{ color: 'var(--color-text-main)', fontWeight: 700 }}>Build</span><span style={{ color: 'var(--color-accent)', fontWeight: 700 }}>Sense</span> Estimator?
                       </label>
