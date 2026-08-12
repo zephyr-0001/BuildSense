@@ -472,7 +472,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f8fafc;
+  background: var(--color-surface);
   padding: 1rem;
   border-radius: var(--radius-md);
   margin-bottom: 1.5rem;
@@ -488,7 +488,7 @@ ul {
 }
 
 .floor-item {
-  background: #f8fafc;
+  background: var(--color-surface);
   padding: 1rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
@@ -536,7 +536,7 @@ ul {
 
 /* Quote Result Panel */
 .quote-panel {
-  background: #f8fafc;
+  background: var(--color-surface);
   border-radius: var(--radius-md);
   padding: 2rem;
   border: 1px solid var(--color-border);
