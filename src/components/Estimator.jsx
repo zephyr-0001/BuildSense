@@ -67,7 +67,8 @@ export default function Estimator({ config }) {
   const handleCalculate = () => {
     const el = document.querySelector('.quote-panel');
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const y = el.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: y, behavior: 'smooth' });
       setIsPulsing(true);
       setTimeout(() => setIsPulsing(false), 900);
     }

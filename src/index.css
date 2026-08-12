@@ -731,12 +731,22 @@ ul {
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--color-accent);
   padding: 0.75rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   z-index: 999;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.3s ease;
+}
+
+.sticky-bottom-quote-bar .sticky-quote-info {
+  grid-column: 2;
+  text-align: center;
+}
+
+.sticky-bottom-quote-bar .btn {
+  grid-column: 3;
+  justify-self: end;
 }
 
 @keyframes slideUp {
