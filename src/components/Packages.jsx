@@ -1,4 +1,5 @@
 import PackageDetails from './PackageDetails';
+import FormattedPackageName from './FormattedPackageName';
 
 export default function Packages({ navigateTo, config }) {
   return (
@@ -47,8 +48,8 @@ export default function Packages({ navigateTo, config }) {
           <p style={{fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '3rem', fontStyle: 'italic'}}>*Please note: Interior works are not included as part of these construction packages.</p>
         </div>
         <div className="packages-grid">
-          {config.packages.map((pkg) => (
-            <PackageCard key={pkg.id} pkg={pkg} navigateTo={navigateTo} />
+          {config.packages.map((pkg, idx) => (
+            <PackageCard key={pkg.id} pkg={pkg} index={idx} navigateTo={navigateTo} />
           ))}
         </div>
       </div>
@@ -56,10 +57,12 @@ export default function Packages({ navigateTo, config }) {
   );
 }
 
-function PackageCard({ pkg, navigateTo }) {
+function PackageCard({ pkg, index, navigateTo }) {
   return (
     <div className="package-card">
-      <div className="package-name">{pkg.name}</div>
+      <div className="package-name">
+        <FormattedPackageName name={pkg.name} index={index} />
+      </div>
       <div className="package-desc">{pkg.description}</div>
       <div className="package-price">₹{pkg.displayStartingRate.toLocaleString('en-IN')} <span>/ sqft (excl. GST)</span></div>
       

@@ -705,3 +705,34 @@ ul {
   color: var(--color-accent);
   font-weight: bold;
 }
+
+/* Sticky Bottom Bar for Seamless Mobile/Desktop Estimate Visibility */
+.sticky-bottom-quote-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--color-accent);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .sticky-bottom-quote-bar {
+    padding: 0.6rem 1rem;
+  }
+}
+

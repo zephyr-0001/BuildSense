@@ -16,14 +16,14 @@ function App() {
     <>
       <nav className="navbar">
         <div className="container nav-container">
-          <div className="logo" onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-accent)' }}><path d="M2 20h20"/><path d="M5 20v-8"/><path d="M10 20v-8"/><path d="M15 20v-8"/><path d="M19 20V8l-7-5-7 5v12"/></svg>
-            Build<span>Sense</span>
+          <div className="logo" onClick={() => navigateTo('home')} style={{ cursor: 'pointer', fontSize: '1.85rem' }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-accent)' }}><path d="M2 20h20"/><path d="M5 20v-8"/><path d="M10 20v-8"/><path d="M15 20v-8"/><path d="M19 20V8l-7-5-7 5v12"/></svg>
+            Build<span style={{ color: 'var(--color-accent)' }}>Sense</span>
           </div>
           <div className="nav-links">
             <a onClick={() => navigateTo('home')} className={currentPage === 'home' ? 'active' : ''} style={{ cursor: 'pointer' }}>Home</a>
             <a onClick={() => navigateTo('packages')} className={currentPage === 'packages' ? 'active' : ''} style={{ cursor: 'pointer' }}>Packages</a>
-            <a onClick={() => navigateTo('estimator')} className={currentPage === 'estimator' ? 'active' : ''} style={{ cursor: 'pointer' }}>Estimate</a>
+            <a onClick={() => navigateTo('estimator')} className={currentPage === 'estimator' ? 'active' : ''} style={{ cursor: 'pointer' }}>Build Estimator</a>
           </div>
         </div>
       </nav>
@@ -38,8 +38,8 @@ function App() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-col">
-              <div className="logo mb-2" style={{ color: 'white' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-accent)' }}><path d="M2 20h20"/><path d="M5 20v-8"/><path d="M10 20v-8"/><path d="M15 20v-8"/><path d="M19 20V8l-7-5-7 5v12"/></svg>
+              <div className="logo mb-2" style={{ color: 'white', fontSize: '1.85rem' }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-accent)' }}><path d="M2 20h20"/><path d="M5 20v-8"/><path d="M10 20v-8"/><path d="M15 20v-8"/><path d="M19 20V8l-7-5-7 5v12"/></svg>
                 Build<span style={{ color: 'var(--color-accent)' }}>Sense</span>
               </div>
               <p>Building your dreams with quality, transparency, and trust.</p>

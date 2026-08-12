@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import PackageDetails from './PackageDetails';
+import FormattedPackageName from './FormattedPackageName';
 
 export default function Estimator({ config }) {
   const [activeTab, setActiveTab] = useState('quick');
   const [selectedPkgId, setSelectedPkgId] = useState('');
   const [quickArea, setQuickArea] = useState('');
+  const [isPulsing, setIsPulsing] = useState(false);
   
   const [floors, setFloors] = useState([
     { id: '1', type: 'Ground Floor', length: '', width: '' }
@@ -49,7 +51,8 @@ export default function Estimator({ config }) {
   };
 
   const totalArea = calcTotalArea();
-  const pkg = config.packages.find(p => p.id === selectedPkgId);
+  const pkgIndex = config.packages.findIndex(p => p.id === selectedPkgId);
+  const pkg = pkgIndex >= 0 ? config.packages[pkgIndex] : null;
 
   let totalCost = 0;
   if (pkg && totalArea > 0) {
@@ -59,6 +62,16 @@ export default function Estimator({ config }) {
     const gstAmount = subtotal * (config.gst.value / 100);
     totalCost = subtotal + gstAmount;
   }
+
+  // Trigger calculate & smooth scroll to quote
+  const handleCalculate = () => {
+    const el = document.querySelector('.quote-panel');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setIsPulsing(true);
+      setTimeout(() => setIsPulsing(false), 900);
+    }
+  };
 
   // Handle lead submission
   const handleLeadSubmit = async (e) => {
@@ -170,7 +183,9 @@ export default function Estimator({ config }) {
               <path d="M 400 70 L 415 85 M 415 70 L 400 85" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" className="anim-fade delay-5" /> {/* Multiply */}
             </svg>
           </div>
-          <h2 className="section-title">Cost Estimator</h2>
+          <h2 className="section-title">
+            <span style={{ color: 'var(--color-accent)' }}>Build</span> Estimator
+          </h2>
           <p className="section-subtitle">Get an instant, transparent quote for your project based on your requirements.</p>
           <p style={{fontSize: '0.875rem', color: 'var(--color-accent)', marginTop: '0.5rem', fontWeight: '600'}}>⚠️ All prices mentioned are exclusive of GST.</p>
         </div>
@@ -194,7 +209,9 @@ export default function Estimator({ config }) {
                 </select>
                 {pkg && (
                   <div style={{ marginTop: '1rem', padding: '1.25rem', border: '1px solid var(--color-border)', borderRadius: '0.75rem', background: 'rgba(255, 255, 255, 0.02)' }}>
-                    <h4 style={{ marginBottom: '0.5rem', color: 'var(--color-text-main)' }}>{pkg.name} Details</h4>
+                    <h4 style={{ marginBottom: '0.5rem' }}>
+                      <FormattedPackageName name={pkg.name} index={pkgIndex} /> Details
+                    </h4>
                     <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}>{pkg.description}</p>
                     <PackageDetails pkg={pkg} />
                   </div>
@@ -203,7 +220,7 @@ export default function Estimator({ config }) {
 
               {activeTab === 'quick' && (
                 <div className="tab-content active">
-                  <div className="input-group">
+                  <div className="input-group mb-4">
                     <label>Total Built-up Area (sqft)</label>
                     <input type="number" className="form-control" placeholder="e.g. 2400" min="0" value={quickArea} onChange={e => setQuickArea(e.target.value)} />
                   </div>
@@ -212,7 +229,7 @@ export default function Estimator({ config }) {
 
               {activeTab === 'custom' && (
                 <div className="tab-content active">
-                  <div id="floor-builder-wrapper">
+                  <div id="floor-builder-wrapper" className="mb-4">
                     <label className="mb-2" style={{display: 'block', fontWeight: 500}}>Floor-wise Builder</label>
                     <div className="floor-list">
                       {floors.map(floor => (
@@ -241,16 +258,44 @@ export default function Estimator({ config }) {
                         </div>
                       ))}
                     </div>
-                    <button className="btn-add-floor" onClick={handleAddFloor}>+ Add Floor</button>
+                    <button className="btn-add-floor mb-4" onClick={handleAddFloor}>+ Add Floor</button>
                   </div>
                 </div>
               )}
+
+              {/* Action Button to Explicitly Calculate and Scroll to Quote */}
+              <div style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>
+                <button 
+                  type="button" 
+                  className="btn btn-primary" 
+                  onClick={handleCalculate}
+                  style={{
+                    width: '100%', 
+                    padding: '0.9rem 1.5rem',
+                    fontSize: '1.05rem',
+                    fontWeight: 600,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem',
+                    boxShadow: '0 4px 15px rgba(249, 115, 22, 0.4)'
+                  }}
+                >
+                  ⚡ Calculate Estimate & View Quote
+                </button>
+              </div>
             </div>
 
             {/* Quote Panel */}
-            <div className="quote-panel">
+            <div className={`quote-panel ${isPulsing ? 'pulse-active' : ''}`} style={{
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              transform: isPulsing ? 'scale(1.03)' : 'scale(1)',
+              boxShadow: isPulsing ? '0 0 30px rgba(249, 115, 22, 0.6)' : undefined
+            }}>
               <div className="quote-title">Estimated Cost</div>
-              <div className="quote-amount">₹{pkg && totalArea > 0 ? Math.round(totalCost).toLocaleString('en-IN') : '0'}</div>
+              <div className="quote-amount" style={{ transition: 'color 0.3s ease' }}>
+                ₹{pkg && totalArea > 0 ? Math.round(totalCost).toLocaleString('en-IN') : '0'}
+              </div>
               <div className="quote-details">
                 <div className="quote-row total-area">
                   <span>Built-up Area</span>
@@ -258,10 +303,13 @@ export default function Estimator({ config }) {
                 </div>
                 <div className="quote-row">
                   <span>Package Selected</span>
-                  <span>{pkg ? pkg.name : '-'}</span>
+                  <span>{pkg ? <FormattedPackageName name={pkg.name} index={pkgIndex} /> : '-'}</span>
                 </div>
                 <div className="quote-row">
-                  <span>Package Rate (excl. GST)</span>
+                  <span>
+                    Package Rate<br/>
+                    <small style={{ fontSize: '0.8rem', opacity: 0.8 }}>(excl. GST)</small>
+                  </span>
                   <span>{pkg ? `₹${pkg.displayStartingRate.toLocaleString('en-IN')} / sqft` : '-'}</span>
                 </div>
               </div>
@@ -303,7 +351,9 @@ export default function Estimator({ config }) {
                     )}
 
                     <div style={{marginTop: '1.5rem', marginBottom: '1.5rem', padding: '1rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '0.75rem', border: '1px solid var(--color-border)'}}>
-                      <label style={{display: 'block', marginBottom: '0.75rem', fontWeight: 500}}>How was your experience with our estimator?</label>
+                      <label style={{display: 'block', marginBottom: '0.75rem', fontWeight: 500, lineHeight: 1.4}}>
+                        How was your experience with our <span style={{ color: 'var(--color-text-main)', fontWeight: 700 }}>Build</span><span style={{ color: 'var(--color-accent)', fontWeight: 700 }}>Sense</span> Estimator?
+                      </label>
                       <div style={{display: 'flex', gap: '0.5rem', marginBottom: rating > 0 ? '1rem' : '0'}}>
                         {[1, 2, 3, 4, 5].map(star => (
                           <svg 
@@ -353,6 +403,27 @@ export default function Estimator({ config }) {
           </div>
         </div>
       </div>
+
+      {/* Mobile & Desktop Floating Bottom Sticky Bar */}
+      {pkg && totalArea > 0 && (
+        <div className="sticky-bottom-quote-bar">
+          <div className="sticky-quote-info">
+            <span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', display: 'block' }}>Estimated Cost (excl. GST)</span>
+            <strong style={{ fontSize: '1.25rem', color: 'var(--color-accent)' }}>
+              ₹{Math.round(totalCost).toLocaleString('en-IN')}
+            </strong>
+          </div>
+          <button 
+            type="button" 
+            className="btn btn-primary" 
+            onClick={handleCalculate}
+            style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', fontWeight: 600 }}
+          >
+            View Full Quote ➔
+          </button>
+        </div>
+      )}
     </section>
   );
 }
+
