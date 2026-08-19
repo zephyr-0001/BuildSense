@@ -34,7 +34,7 @@ function App() {
         <div className="container nav-container">
           <div className="logo" onClick={() => navigateTo('home')} style={{ cursor: 'pointer', fontSize: '1.85rem' }}>
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-accent)' }}><path d="M2 20h20"/><path d="M5 20v-8"/><path d="M10 20v-8"/><path d="M15 20v-8"/><path d="M19 20V8l-7-5-7 5v12"/></svg>
-            Build<span style={{ color: 'var(--color-accent)' }}>Sense</span>
+            Build<span style={{ color: 'var(--color-accent)' }}>Zen</span>
           </div>
           <div className="nav-links">
             <a onClick={() => navigateTo('home')} className={currentPage === 'home' ? 'active' : ''} style={{ cursor: 'pointer' }}>Home</a>
@@ -70,13 +70,13 @@ function App() {
             <div className="footer-col">
               <div className="logo mb-2" style={{ color: 'white', fontSize: '1.85rem' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-accent)' }}><path d="M2 20h20"/><path d="M5 20v-8"/><path d="M10 20v-8"/><path d="M15 20v-8"/><path d="M19 20V8l-7-5-7 5v12"/></svg>
-                Build<span style={{ color: 'var(--color-accent)' }}>Sense</span>
+                Build<span style={{ color: 'var(--color-accent)' }}>Zen</span>
               </div>
               <p>Building your dreams with quality, transparency, and trust.</p>
             </div>
             <div className="footer-col">
               <h4>Contact Us</h4>
-              <p>✉️ buildwithsense@gmail.com</p>
+              <p>✉️ buildwithzen@gmail.com</p>
             </div>
             <div className="footer-col">
               <h4>Quick Links</h4>
