@@ -76,7 +76,7 @@ function App() {
             </div>
             <div className="footer-col">
               <h4>Contact Us</h4>
-              <p>✉️ buildwithzen@gmail.com</p>
+              <p>✉️ info@buildzen.in</p>
             </div>
             <div className="footer-col">
               <h4>Quick Links</h4>
