@@ -1,8 +1,8 @@
-export const BuildSenseConfig = {
+export const BuildZenConfig = {
     packages: [
         {
             id: "sense_essential",
-            name: "Sense Essential",
+            name: "Zen Essential",
             description: "A perfect blend of affordability and structural integrity, delivering branded components and core interior fittings.",
             displayStartingRate: 2500,
             internalRatePerSqft: 2500,
@@ -142,7 +142,7 @@ export const BuildSenseConfig = {
         },
         {
             id: "sense_prime",
-            name: "Sense Prime",
+            name: "Zen Prime",
             description: "A sophisticated construction plan featuring high-end finishes, detailed 3D modeling, and premium-grade building materials.",
             displayStartingRate: 2750,
             internalRatePerSqft: 2750,
@@ -298,7 +298,7 @@ export const BuildSenseConfig = {
         },
         {
             id: "sense_elite",
-            name: "Sense Elite",
+            name: "Zen Elite",
             description: "Elevated luxury living with 11-foot ceilings, top-tier Fenesta windows, and smart-home ready infrastructure.",
             displayStartingRate: 3000,
             internalRatePerSqft: 3000,
@@ -450,7 +450,7 @@ export const BuildSenseConfig = {
         },
         {
             id: "sense_signature",
-            name: "Sense Signature",
+            name: "Zen Signature",
             description: "The absolute pinnacle of luxury construction, offering expansive spaces, designer elevations, and opulent interior integrations.",
             displayStartingRate: 3500,
             internalRatePerSqft: 3500,

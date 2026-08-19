@@ -4,7 +4,7 @@ export default function FormattedPackageName({ name, index = 0, style = {} }) {
   if (parts.length < 2) return <span style={style}>{name}</span>;
 
   // Consistent Black + Orange styling across all package names:
-  // "Sense" (Black / Text Main) + "Essential / Prime / Elite / Signature" (Orange / Accent)
+  // "Zen" (Black / Text Main) + "Essential / Prime / Elite / Signature" (Orange / Accent)
   const color1 = 'var(--color-text-main)';
   const color2 = 'var(--color-accent)';
 

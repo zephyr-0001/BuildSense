@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import Packages from './components/Packages';
 import Estimator from './components/Estimator';
-import { BuildSenseConfig } from './data/config';
+import { BuildZenConfig } from './data/config';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -36,7 +36,7 @@ function App() {
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-accent)' }}><path d="M2 20h20"/><path d="M5 20v-8"/><path d="M10 20v-8"/><path d="M15 20v-8"/><path d="M19 20V8l-7-5-7 5v12"/></svg>
             Build<span style={{ color: 'var(--color-accent)' }}>Sense</span>
           </div>
-          <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <div className="nav-links">
             <a onClick={() => navigateTo('home')} className={currentPage === 'home' ? 'active' : ''} style={{ cursor: 'pointer' }}>Home</a>
             <a onClick={() => navigateTo('packages')} className={currentPage === 'packages' ? 'active' : ''} style={{ cursor: 'pointer' }}>Packages</a>
             <a onClick={() => navigateTo('estimator')} className={currentPage === 'estimator' ? 'active' : ''} style={{ cursor: 'pointer' }}>Build Estimator</a>
@@ -60,8 +60,8 @@ function App() {
 
       <main>
         {currentPage === 'home' && <Hero navigateTo={navigateTo} />}
-        {currentPage === 'packages' && <Packages navigateTo={navigateTo} config={BuildSenseConfig} />}
-        {currentPage === 'estimator' && <Estimator config={BuildSenseConfig} />}
+        {currentPage === 'packages' && <Packages navigateTo={navigateTo} config={BuildZenConfig} />}
+        {currentPage === 'estimator' && <Estimator config={BuildZenConfig} />}
       </main>
 
       <footer className="footer">
@@ -86,7 +86,7 @@ function App() {
             </div>
           </div>
           <div className="footer-bottom">
-            &copy; 2026 BuildSense. All rights reserved.
+            &copy; 2026 BuildZen. All rights reserved.
           </div>
         </div>
       </footer>
