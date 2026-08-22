@@ -92,6 +92,14 @@ export default function Estimator({ config }) {
       setLeadError(true);
       return;
     }
+    if (leadPhone.trim()) {
+      const digits = leadPhone.replace(/\D/g, '');
+      if (digits.length < 10) {
+        alert("Please enter a valid 10-digit phone number.");
+        setLeadError(true);
+        return;
+      }
+    }
     setLeadError(false);
     setIsSubmitting(true);
     
@@ -137,7 +145,7 @@ export default function Estimator({ config }) {
       Object.entries(pkg.detailedSections).forEach(([key, items]) => {
         const sectionName = key.replace(/([A-Z])/g, ' $1').trim().toUpperCase();
         packageDetailsText += `\n[${sectionName}]\n`;
-        packageDetailsText += items.map(item => `- ${item}`).join('\n');
+        packageDetailsText += items.map(item => `- ${item.title}: ${item.description}`).join('\n');
       });
     }
   }
