@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import Packages from './components/Packages';
 import Estimator from './components/Estimator';
+import BackgroundPattern from './components/BackgroundPattern';
 import { BuildZenConfig } from './data/config';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <BackgroundPattern />
       <nav className="navbar">
         <div className="container nav-container">
           <div className="logo" onClick={() => navigateTo('home')} style={{ cursor: 'pointer', fontSize: '1.85rem' }}>

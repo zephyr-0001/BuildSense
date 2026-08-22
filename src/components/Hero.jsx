@@ -4,7 +4,7 @@ export default function Hero({ navigateTo }) {
       <div className="hero">
         <div className="container hero-container">
           <div className="hero-content">
-            <h1 style={{ fontSize: '4rem', marginBottom: '0.5rem', color: 'var(--color-text-main)' }}>Build<span style={{ color: 'var(--color-accent)' }}>Zen</span>.</h1>
+            <h1 style={{ fontSize: '4rem', marginBottom: '0.5rem', color: 'var(--color-text-main)' }}>Build<span style={{ color: 'var(--color-accent)' }}>Zen</span></h1>
             <p style={{ fontSize: '1.25rem', fontStyle: 'italic', marginBottom: '1.5rem', color: 'var(--color-text-muted)' }}>Thoughtful design, mindful construction.</p>
             <p>Transparent pricing, premium quality, and zero hidden costs. Use our intelligent estimator to get an instant quote for your construction project today.</p>
             <div className="hero-actions">

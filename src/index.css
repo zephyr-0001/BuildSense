@@ -261,6 +261,8 @@ ul {
   height: auto;
   animation: float 6s ease-in-out infinite;
   filter: drop-shadow(0 15px 25px rgba(249,115,22,0.15));
+  background: radial-gradient(closest-side, var(--color-bg) 60%, transparent 100%);
+  border-radius: 50%;
 }
 
 .anim-path {
@@ -387,7 +389,7 @@ ul {
 
 .estimator-tabs {
   display: flex;
-  background: #f1f5f9;
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -449,6 +451,8 @@ ul {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text-main);
   font-size: 1rem;
   transition: var(--transition);
 }
@@ -521,7 +525,7 @@ ul {
 .btn-add-floor {
   width: 100%;
   padding: 0.75rem;
-  background: #f1f5f9;
+  background: var(--color-bg);
   border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
   color: var(--color-text-main);

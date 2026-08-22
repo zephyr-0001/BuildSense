@@ -31,7 +31,18 @@ export default function Estimator({ config }) {
   }, []);
 
   const handleAddFloor = () => {
-    setFloors([...floors, { id: Date.now().toString(), type: 'Floor 1', length: '', width: '' }]);
+    const floorProgression = ['Basement', 'Stilt Floor', 'Ground Floor', 'Floor 1', 'Floor 2', 'Floor 3', 'Floor 4', 'Floor 5', 'Terrace'];
+    let nextType = 'Floor 1';
+    
+    if (floors.length > 0) {
+      const lastFloorType = floors[floors.length - 1].type;
+      const lastIndex = floorProgression.indexOf(lastFloorType);
+      if (lastIndex !== -1 && lastIndex < floorProgression.length - 1) {
+        nextType = floorProgression[lastIndex + 1];
+      }
+    }
+    
+    setFloors([...floors, { id: Date.now().toString(), type: nextType, length: '', width: '' }]);
   };
 
   const handleRemoveFloor = (id) => {
@@ -238,10 +249,13 @@ export default function Estimator({ config }) {
                           <div className="floor-item-header">
                             <select className="form-control" style={{width: 'auto', padding: '0.25rem 0.5rem'}} value={floor.type} onChange={e => handleUpdateFloor(floor.id, 'type', e.target.value)}>
                               <option value="Basement">Basement</option>
+                              <option value="Stilt Floor">Stilt Floor</option>
                               <option value="Ground Floor">Ground Floor</option>
                               <option value="Floor 1">Floor 1</option>
                               <option value="Floor 2">Floor 2</option>
                               <option value="Floor 3">Floor 3</option>
+                              <option value="Floor 4">Floor 4</option>
+                              <option value="Floor 5">Floor 5</option>
                               <option value="Terrace">Terrace</option>
                             </select>
                             <button className="btn-remove" onClick={() => handleRemoveFloor(floor.id)}>✕ Remove</button>
