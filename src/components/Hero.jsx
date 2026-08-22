@@ -4,9 +4,9 @@ export default function Hero({ navigateTo }) {
       <div className="hero">
         <div className="container hero-container">
           <div className="hero-content">
-            <h1 style={{ fontSize: '4rem', marginBottom: '0.5rem', color: 'var(--color-text-main)' }}>Build<span style={{ color: 'var(--color-accent)' }}>Zen</span></h1>
-            <p style={{ fontSize: '1.25rem', fontStyle: 'italic', marginBottom: '1.5rem', color: 'var(--color-text-muted)' }}>Thoughtful design, mindful construction.</p>
-            <p>Transparent pricing, premium quality, and zero hidden costs. Use our intelligent estimator to get an instant quote for your construction project today.</p>
+            <h1 style={{ fontSize: '4rem', marginBottom: '0.5rem', color: 'var(--color-text-main)', fontFamily: "'Times New Roman', Times, serif", textShadow: '0 0 10px var(--color-bg), 0 0 20px var(--color-bg), 0 0 30px var(--color-bg)' }}>Build<span style={{ color: 'var(--color-accent)' }}>Zen</span></h1>
+            <p style={{ fontSize: '1.25rem', fontStyle: 'italic', marginBottom: '1.5rem', color: 'var(--color-text-main)', fontWeight: 600, textShadow: '0 0 8px var(--color-bg), 0 0 15px var(--color-bg), 0 0 20px var(--color-bg)' }}>Thoughtful design, mindful construction.</p>
+            <p style={{ fontSize: '1.15rem', lineHeight: 1.7, color: 'var(--color-text-main)', fontWeight: 500, textShadow: '0 0 8px var(--color-bg), 0 0 15px var(--color-bg), 0 0 20px var(--color-bg)' }}>Transparent pricing, premium quality, and zero hidden costs. Use our intelligent estimator to get an instant quote for your construction project today.</p>
             <div className="hero-actions">
               <button className="btn btn-primary" onClick={() => navigateTo('estimator')}>Get an Estimate</button>
               <button className="btn btn-outline" onClick={() => navigateTo('packages')}>View Packages</button>
