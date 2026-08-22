@@ -1,614 +1,600 @@
 export const BuildZenConfig = {
+    fees: { value: 0 },
+    gst: { value: 0 },
     packages: [
-        {
-            id: "sense_essential",
-            name: "Zen Essential",
-            description: "A perfect blend of affordability and structural integrity, delivering branded components and core interior fittings.",
-            displayStartingRate: 2500,
-            internalRatePerSqft: 2500,
-            features: [
-                "Generous 10'6\" ceiling clearance",
-                "High-strength Fe-500 TMT steel reinforcement",
-                "Weather-proof UPVC windows"
+    {
+        "id": "bz1_classic_horizon",
+        "name": "BZ-1 \u2022 CLASSIC HORIZON",
+        "description": "Designed for clients seeking robust structural engineering paired with high-durability, cost-effective finishes from proven ISI-certified brands.",
+        "displayStartingRate": 1850,
+        "internalRatePerSqft": 1850,
+        "features": [
+            "Steel: Kamadhenu / A-One Gold / Agni TMT (Fe-550D)",
+            "Flooring: Vitrified Tiles (Kajaria / Somany / Simpolo)",
+            "Sanitary: Cera / Parryware / Jaquar Essco Series",
+            "Doors: Veneer Flush Main Door + Sal Wood Frames"
+        ],
+        "detailedSections": {
+            "Integrated Design Scope": [
+                {
+                    "title": "Complete Comprehensive Package",
+                    "description": "Full Architectural space planning, 2D floor plans, 3D front elevation view, and certified Structural Engineering working drawings included."
+                }
             ],
-            detailedSections: {
-                "Architectural Planning": [
-                    "Comprehensive 2D spatial layouts",
-                    "Engaging 3D exterior visualizations",
-                    "Maximum of three layout adjustments",
-                    "Interior 3D perspectives for key rooms",
-                    "Initial site assessment and dimensional mapping"
-                ],
-                "Civil & Structural Framework": [
-                    "Floor-to-ceiling clearance of 10 feet 6 inches",
-                    "Premium steel reinforcement (Meenakshi or Kamadhenu Fe-500 TMT)",
-                    "Top-tier Grade 53 cement (ACC, Penna, or Dalmia)",
-                    "8000-liter solid-block underground sump with leak-proof plaster",
-                    "RMC- M25 grade concrete",
-                    "Sturdy solid concrete block masonry (6-inch and 4-inch profiles)",
-                    "Reinforced joints using chicken mesh",
-                    "Double-washed manufactured sand",
-                    "Exterior weather-proofing applied via Dr.Fixit or FOSROC",
-                    "Comprehensive cement-based terrace leak prevention",
-                    "Built-in ledge walls for concealing sanitary plumbing",
-                    "Pre-construction subterranean anti-termite shield"
-                ],
-                "Drafting & Documentation": [
-                    "Comprehensive working drafts for all construction phases",
-                    "Detailed schedule mapping for doors and windows",
-                    "Cross-section and building elevation drafts",
-                    "Complete post-completion project portfolio"
-                ],
-                "Engineering & Analysis": [
-                    "IS Code compliant structural engineering framework",
-                    "Execution-ready structural Drawings"
-                ],
-                "Utility System Design": [
-                    "Complete electrical and switching routing plan",
-                    "Fresh water plumbing supply schematics",
-                    "Wastewater and sewage drainage routing"
-                ],
-                "Statutory Approvals Support": [
-                    "Support for acquiring municipal building plan approvals",
-                    "Assistance with temporary construction power setup",
-                    "Guidance for securing permanent electrical connections",
-                    "Help with establishing municipal water sourcing",
-                    "Sewage line connection liaison support"
-                ],
-                "Flooring & Wall Cladding": [
-                    "Bedrooms and Kitchen: 2'x2' durable vitrified tiles",
-                    "Living areas: Marble-textured premium vitrified flooring",
-                    "Stairways: High-durability granite steps",
-                    "Balconies and common paths: Slip-resistant outdoor tiles",
-                    "Washroom flooring: Anti-slip safety tiling",
-                    "Washroom walls: 7ft high protective dado cladding",
-                    "Driveway and Parking: Heavy-duty interlocking pavers",
-                    "Kitchen countertops: Solid seamless granite surfaces",
-                    "Kitchen walls: Easy-clean backsplash tiles",
-                    "Puja area: Dedicated premium granite slab"
-                ],
-                "Paints & Coatings": [
-                    "Interiors: Double putty coat, primer base, and premium Tractor Shine finish",
-                    "Exteriors: Primer base paired with dual-layer Apex weather-resistant coating",
-                    "Trusted paint brands: Asian Paints, Berger, or Nippo"
-                ],
-                "Electrical Systems": [
-                    "Customized lighting and power socket distribution",
-                    "Dedicated water heater connections in every washroom",
-                    "Air conditioning prep in all sleeping quarters",
-                    "Fully concealed wall and ceiling conduit networks",
-                    "Fire-resistant copper cabling (Finolex or equivalent)",
-                    "Complete exterior landscape lighting prep",
-                    "Anchor-Roma series switchgear and faceplates",
-                    "Reliable IndoAsian or Siemens main distribution boards",
-                    "Dedicated EV charging outlet in the garage bay",
-                    "Inverter and UPS integration ready"
-                ],
-                "Plumbing & Water Management": [
-                    "End-to-end interior and exterior fresh water supply",
-                    "Direct municipal water line integration",
-                    "External sewage routing featuring maintenance chambers",
-                    "High-grade Ashirwad or Astral CPVC piping",
-                    "Solar heater roof plumbing prep",
-                    "Eco-friendly rainwater harvesting ground recharge pit",
-                    "Reliable PVC rooftop storage reservoir",
-                    "Galvanized iron covers for inspection chambers",
-                    "Independent waste and storm drainage channels"
-                ],
-                "Sanitary & Kitchen Fixtures": [
-                    "Premium kitchen sink basin (Stainless Steel or Granite options)",
-                    "High-end Jaquar or Hindware CP and sanitary wares",
-                    "Dedicated powder room utility fittings"
-                ],
-                "Doors & Windows Setup": [
-                    "Main entrance: Premium teak wood frame and artisan shutter",
-                    "Interior rooms: Sal wood frames paired with flush doors",
-                    "Melamine hand-polished finish applied to the main door",
-                    "Durable, moisture-resistant bathroom specific doors",
-                    "High-quality Ozone/Europa locking hardware with stainless hinges",
-                    "UPVC window units featuring clear glass and built-in safety grills"
-                ],
-                "Metal Fabrication": [
-                    "Custom-designed main property entrance gate",
-                    "Mild steel safety railings for external stairs and balconies",
-                    "Polished stainless steel railings for interior staircases"
-                ],
-                "Boundary Enclosures": [
-                    "Excavation and size stone masonry trench foundation",
-                    "5-foot high perimeter boundary enclosure",
-                    "Fully plastered and painted exterior finish"
-                ],
-                "Important Exclusions": [
-                    "Design revisions exceeding the standard limit will incur design fees",
-                    "Interior wood works are not part of this package",
-                    "Government and statutory liaison charges are direct client expenses",
-                    "Municipal plan sanctioning fees are paid by the property owner",
-                    "Elevating the ground level beyond 18 inches will be billed extra",
-                    "Hard rock or complex soil excavation is billed separately",
-                    "Debris removal and fresh earth purchases are charged on actuals",
-                    "Significant market price surges in raw materials are subject to joint review",
-                    "Door and window areas are capped at 22% of total built-up space",
-                    "Client must arrange temporary water and power for the construction crew",
-                    "Foundation depths extending beyond 5 feet are additionally charged",
-                    "Logistic hurdles for narrow road material delivery billed on actuals",
-                    "Municipal road cutting deposits are excluded from this estimate"
-                ],
-                "Warranties Provided": [
-                    "12-month holistic structural construction guarantee",
-                    "10-year comprehensive terrace and wet-area waterproofing warranty",
-                    "All warranties are legally documented on official stamp paper"
-                ]
-            }
-        },
-        {
-            id: "sense_prime",
-            name: "Zen Prime",
-            description: "A sophisticated construction plan featuring high-end finishes, detailed 3D modeling, and premium-grade building materials.",
-            displayStartingRate: 2750,
-            internalRatePerSqft: 2750,
-            features: [
-                "Advanced 2D/3D layouts",
-                "Authentic Italian marble or large-format vitrified flooring",
-                "Top-tier JSW/SAIL/Vizag steel reinforcements",
-                "Pre-wired for modern home automation"
+            "Steel & Structural Reinforcement": [
+                {
+                    "title": "Kamadhenu / A-One Gold / Agni TMT (Fe-550D)",
+                    "description": "High-ductility ISI-certified TOR steel bars, engineered for maximum tensile load and seismic resistance."
+                }
             ],
-            detailedSections: {
-                "Architectural Planning": [
-                    "High-end 2D floor layouts and comprehensive 3D models",
-                    "Detailed exterior visual renders for all facades",
-                    "Generous allowance of design iterations",
-                    "Immersive isometric room-by-room perspectives",
-                    "Bespoke landscaping and hardscape blueprints",
-                    "Fully interactive 3D virtual home walkthroughs",
-                    "Segmented 3D models breaking down individual floors",
-                    "Instrument-based precision site topography survey",
-                    "Advanced Virtual Reality property tours"
-                ],
-                "Civil & Structural Framework": [
-                    "Spacious floor-to-ceiling heights of 10 feet 6 inches",
-                    "Elite steel reinforcement (JSW, SAIL, or Vizag Fe-500 TMT)",
-                    "Grade 53 cement sourced from ACC or Ultratech",
-                    "8000-liter RCC underground sump with waterproof lining",
-                    "High-grade M25 ready-mix concrete",
-                    "Precision machine-cut solid blocks (6-inch and 4-inch)",
-                    "Custom architectural elements including courtyards and skylights",
-                    "Anti-crack chicken mesh plastering at all structural joints",
-                    "Advanced exterior moisture defense using Dr.Fixit or FOSROC",
-                    "Crystalline waterproofing and cinder-filled sunken washrooms",
-                    "Concealed sanitary ledges built directly into the structure",
-                    "Thorough pre-construction anti-termite ground treatment"
-                ],
-                "Drafting & Documentation": [
-                    "Extensive working drafts covering every construction phase",
-                    "Detailed opening schedules for doors and fenestration (windows)",
-                    "Cross-section and precise building elevation blueprints",
-                    "Curated post-completion handover portfolio"
-                ],
-                "Interior Woodwork & Finishes": [
-                    "Immersive 3D interior design mockups (if executed by our team)",
-                    "Comprehensive 2D furniture placement layouts",
-                    "Dedicated support for sourcing premium interior materials"
-                ],
-                "Engineering & Analysis": [
-                    "Rigorous structural engineering as per national IS standards",
-                    "Flawless good-for-construction foundational drawings",
-                    "Comprehensive geotechnical soil test reports, if required on site condition",
-                    "Integrated overlapping of structural, architectural, and MEP plans",
-                    "3D structural stress-test and analysis documentation"
-                ],
-                "Utility System Design": [
-                    "Precision electrical circuit and switching plans",
-                    "Fresh water plumbing and pressure routing",
-                    "Wastewater, sewage, and drainage schematics",
-                    "Dedicated HVAC and climate control blueprints"
-                ],
-                "Statutory Approvals Support": [
-                    "End-to-end guidance for municipal plan sanctions",
-                    "Assistance with securing temporary construction electricity",
-                    "Liaison support for permanent power grid connections",
-                    "Help with establishing municipal water lines",
-                    "Sewage network connection support"
-                ],
-                "Flooring & Wall Cladding": [
-                    "Kitchen and Bedrooms: Premium vitrified tiles",
-                    "Main Living and Dining: Authentic Italian marble or large 4'x8' vitrified slabs",
-                    "Stairways and Foyers: High-polish granite slabs",
-                    "Balconies and Passages: Matte anti-skid safety tiles",
-                    "Washroom flooring: Textured anti-slip tiling",
-                    "Washroom walls: Full-height ceiling-level dado cladding",
-                    "Parking bays: Heavy-duty designer pavers",
-                    "Kitchen counters: Seamless granite working surfaces",
-                    "Kitchen walls: Backsplash dado up to 2 feet above counters",
-                    "Puja room: Full-height wall tiling and dedicated granite pedestal",
-                    "Unrestricted tile sizes with premium epoxy bathroom grouting"
-                ],
-                "Paints & Coatings": [
-                    "Interiors: Double putty, single primer, and dual coats of premium emulsion",
-                    "Exteriors: Primer base paired with two coats of Apex weatherproof shield",
-                    "Preferred brands: Asian Paints, Berger, or Dulux"
-                ],
-                "Electrical Systems": [
-                    "Ample lighting and power sockets exceeding standard requirements",
-                    "Fully concealed heavy-duty conduit networks",
-                    "Fire-retardant premium copper cabling by Havells",
-                    "Air conditioning readiness in all living spaces",
-                    "Legrand Allzy white switchgear (touch-screen compatible)",
-                    "Comprehensive exterior and landscape electrification",
-                    "Legrand-branded main distribution boards and MCBs",
-                    "Pre-wired network for smart home automation",
-                    "Dedicated EV charging outlet in the parking bay",
-                    "Centralized UPS/Inverter integration point"
-                ],
-                "Plumbing & Water Management": [
-                    "Comprehensive interior and exterior water distribution",
-                    "Direct municipal water intake connections",
-                    "Independent kitchen borewell/municipal lines if required",
-                    "External sewage routing featuring robust inspection chambers",
-                    "Class B Ashirwad or Astral CPVC plumbing lines",
-                    "Solar water heater and electric geyser plumbing prep",
-                    "Eco-friendly rainwater harvesting ground recharge system",
-                    "Premium Sintex PVC rooftop storage reservoir",
-                    "Fiber-reinforced plastic (FRP) chamber covers",
-                    "Separated hot and cold water mixer lines for sinks"
-                ],
-                "Sanitary & Kitchen Fixtures": [
-                    "Premium kitchen sink basins and accessories",
-                    "High-end Jaquar or Hindware CP and sanitary wares for attached baths",
-                    "Dedicated luxury fittings for the powder room"
-                ],
-                "Doors & Windows Setup": [
-                    "Main entrance: Grand teak wood frame and shutter",
-                    "Interior rooms: Sturdy Sal wood frames paired with flush doors",
-                    "Main door receives a premium melamine spray polish",
-                    "High-end Ozone, Europa, or Dorma hardware with stainless hinges",
-                    "UPVC Kommerling windows featuring clear glass and safety grills",
-                    "Optional upgrade to traditional wooden windows (Sal/Honne)"
-                ],
-                "Metal Fabrication": [
-                    "Custom-crafted designer main property gate",
-                    "Mild steel safety railings for external stairs and balconies",
-                    "Polished stainless steel railings for interior staircases",
-                    "Utility and balcony areas receive built-in waterproofing"
-                ],
-                "Boundary Enclosures": [
-                    "Size stone masonry trench foundation",
-                    "5-foot high solid block perimeter boundary enclosure",
-                    "Fully plastered and finished with exterior-grade paint"
-                ],
-                "Important Exclusions": [
-                    "Design modifications exceeding iterations will incur extra fees",
-                    "Interior wood works will not be part of package",
-                    "Government and statutory liaison charges are direct client expenses",
-                    "Municipal plan sanctioning fees are paid by the property owner",
-                    "Elevating the ground level beyond 18 inches will be billed extra",
-                    "Hard rock or complex soil excavation is billed separately",
-                    "Debris removal and fresh earth purchases are charged on actuals",
-                    "Material cap limits: Cement price increases or steel price surges are adjusted accordingly",
-                    "Door and window areas are capped at 25% of total built-up space",
-                    "Client must arrange temporary water and power for the construction crew",
-                    "Foundation depths extending beyond 5 feet are additionally charged",
-                    "Logistic hurdles for narrow road material delivery billed on actuals"
-                ],
-                "Warranties Provided": [
-                    "12-month holistic structural construction guarantee",
-                    "10-year comprehensive terrace and wet-area waterproofing warranty",
-                    "All warranties are legally documented on official stamp paper"
-                ]
-            }
-        },
-        {
-            id: "sense_elite",
-            name: "Zen Elite",
-            description: "Elevated luxury living with 11-foot ceilings, top-tier Fenesta windows, and smart-home ready infrastructure.",
-            displayStartingRate: 3000,
-            internalRatePerSqft: 3000,
-            features: [
-                "Expanded 11-foot vertical floor clearances",
-                "High-end UPVC Fenesta window systems",
-                "Grand teak wood main door",
-                "Premium Italian marble flooring allocations"
+            "Cement & Concrete Mix": [
+                {
+                    "title": "ACC / Birla Samrat / Penna (Grade 53 & 43)",
+                    "description": "Grade 53 cement for high-load structural columns/slabs & Grade 43 for masonry. RCC Design Mix M25 via certified RMC plants."
+                }
             ],
-            detailedSections: {
-                "Architectural Planning": [
-                    "Elite-tier 2D spatial planning and 3D architectural views",
-                    "Comprehensive exterior facade renders for all viewing angles",
-                    "Generous allowance of up to forty design revision cycles",
-                    "Immersive isometric room-by-room perspectives with realistic lighting",
-                    "Bespoke landscaping, garden, and hardscape blueprints",
-                    "Fully interactive 3D virtual home walkthroughs",
-                    "Segmented 3D models breaking down individual floors for clarity",
-                    "Instrument-based precision site topography survey",
-                    "Advanced Virtual Reality property tours featuring interior mockups"
-                ],
-                "Civil & Structural Framework": [
-                    "Grand floor-to-ceiling vertical clearances of 11 feet",
-                    "Elite steel reinforcement (JSW, SAIL, or Vizag Fe-500 TMT)",
-                    "Grade 53 cement sourced from ACC or Ultratech",
-                    "Custom-sized RCC underground sump tailored to occupancy",
-                    "High-grade M25 ready-mix concrete formulations",
-                    "Heavy-duty machine-cut solid blocks (8-inch and 4-inch variants)",
-                    "Custom architectural elements including courtyards and skylights",
-                    "Anti-crack chicken mesh plastering at all structural column joints",
-                    "Advanced exterior moisture defense using Dr.Fixit or FOSROC",
-                    "Crystalline waterproofing and cinder-filled sunken washrooms",
-                    "Concealed sanitary ledges built directly into the structure"
-                ],
-                "Drafting & Documentation": [
-                    "Extensive working drafts covering every single construction phase",
-                    "Detailed opening schedules for doors and architectural fenestration",
-                    "Cross-section and precise building elevation blueprints",
-                    "Curated post-completion handover photography and portfolio"
-                ],
-                "Interior Woodwork & Finishes": [
-                    "Immersive 3D interior design mockups (if executed by our team)",
-                    "Comprehensive 2D furniture placement and spatial layouts",
-                    "Dedicated procurement support for sourcing premium interior materials"
-                ],
-                "Engineering & Analysis": [
-                    "Rigorous structural engineering as per national IS safety standards",
-                    "Flawless good-for-construction foundational drawings",
-                    "Comprehensive geotechnical soil bearing test reports",
-                    "Integrated overlapping of structural, architectural, and MEP plans",
-                    "3D structural stress-test and load analysis documentation"
-                ],
-                "Utility System Design": [
-                    "Precision electrical circuit, lighting, and switching plans",
-                    "Fresh water plumbing and optimized pressure routing",
-                    "Wastewater, sewage, and gradient drainage schematics",
-                    "Dedicated HVAC and climate control blueprints"
-                ],
-                "Statutory Approvals Support": [
-                    "End-to-end guidance for securing municipal plan sanctions",
-                    "Assistance with securing temporary construction electricity",
-                    "Liaison support for permanent power grid connections",
-                    "Help with establishing municipal water lines",
-                    "Sewage network connection support"
-                ],
-                "Flooring & Wall Cladding": [
-                    "Kitchen and Bedrooms: Premium high-durability vitrified tiles",
-                    "Main Living and Dining: Authentic Italian marble or large 4'x8' vitrified slabs",
-                    "Stairways and Foyers: High-polish premium granite slabs",
-                    "Balconies and Passages: Matte anti-skid outdoor safety tiles",
-                    "Washroom flooring: Textured anti-slip safety tiling",
-                    "Washroom walls: Full-height ceiling-level dado cladding",
-                    "Parking bays: Heavy-duty designer vehicular pavers",
-                    "Kitchen counters: Seamless premium granite working surfaces",
-                    "Kitchen walls: Backsplash dado protecting culinary areas",
-                    "Puja room: Full-height wall tiling and dedicated granite pedestal",
-                    "Unrestricted tile sizes with premium epoxy bathroom grouting"
-                ],
-                "Paints & Coatings": [
-                    "Interiors: Triple putty layer, single primer, and multiple coats of premium emulsion",
-                    "Exteriors: Primer base paired with two coats of Apex weatherproof shield",
-                    "Preferred premium brands: Asian Paints, Berger, Dulux, or Nippo paint"
-                ],
-                "Electrical Systems": [
-                    "Ample lighting and power sockets tailored to bespoke client needs",
-                    "Fully concealed heavy-duty, smoke-proof conduit networks",
-                    "Fire-retardant premium copper cabling by Havells",
-                    "Legrand Allzy black & white switchgear (touch-screen compatible)",
-                    "Comprehensive exterior and landscape electrification",
-                    "Legrand-branded main distribution boards and MCBs",
-                    "Pre-wired network for advanced smart home automation",
-                    "Air conditioning readiness in all bedrooms, living, and dining spaces",
-                    "Dedicated EV charging outlet and CCTV surveillance prep",
-                    "Centralized UPS/Inverter integration point"
-                ],
-                "Plumbing & Water Management": [
-                    "Comprehensive interior and exterior water distribution",
-                    "Direct municipal water intake connections",
-                    "Independent kitchen borewell/municipal lines if required",
-                    "External sewage routing featuring robust inspection chambers",
-                    "Class B Ashirwad or Astral CPVC plumbing lines",
-                    "Solar water heater and electric geyser plumbing prep",
-                    "Eco-friendly rainwater harvesting ground recharge system",
-                    "Premium Sintex PVC rooftop storage reservoir",
-                    "Fiber-reinforced plastic (FRP) chamber covers"
-                ],
-                "Sanitary & Kitchen Fixtures": [
-                    "Premium kitchen sink basins and high-end culinary accessories",
-                    "Luxury Jaquar or Hindware CP and sanitary wares for attached baths",
-                    "Dedicated luxury fittings for the powder room"
-                ],
-                "Doors & Windows Setup": [
-                    "Main entrance: Grand teak wood frame and shutter",
-                    "Interior rooms: Sturdy Sal wood frames paired with flush doors",
-                    "Main door receives a premium PU finish spray polish",
-                    "High-end Ozone, Europa, or Dorma hardware with stainless hinges",
-                    "Top-tier UPVC Fenesta windows featuring clear glass and safety grills",
-                    "Optional upgrade to traditional wooden windows (Sal/Honne)"
-                ],
-                "Metal Fabrication": [
-                    "Custom-crafted designer main property gate with Shera board highlights",
-                    "Mild steel safety railings for external stairs and balconies",
-                    "Polished stainless steel railings for interior staircases",
-                    "Utility and balcony areas receive built-in waterproofing"
-                ],
-                "Boundary Enclosures": [
-                    "Size stone masonry trench foundation",
-                    "5-foot high solid block perimeter boundary enclosure",
-                    "Fully plastered and finished with exterior-grade paint"
-                ],
-                "Important Exclusions": [
-                    "Design modifications exceeding iterations will incur fees",
-                    "Government and statutory liaison charges are direct client expenses",
-                    "Municipal plan sanctioning fees are paid by the property owner",
-                    "Elevating the ground level beyond 18 inches will be billed extra",
-                    "Hard rock or complex soil excavation is billed separately",
-                    "Debris removal and fresh earth purchases are charged on actuals",
-                    "Market fluctuations exceeding 45% on raw materials adjusted collaboratively",
-                    "Door and window areas are capped at 27% of total built-up space",
-                    "Client must arrange temporary water and power for the construction crew",
-                    "Foundation depths extending beyond 5 feet are additionally charged"
-                ],
-                "Warranties Provided": [
-                    "12-month holistic structural construction guarantee",
-                    "10-year comprehensive terrace and wet-area waterproofing warranty",
-                    "All warranties are legally documented on official stamp paper"
-                ]
-            }
-        },
-        {
-            id: "sense_signature",
-            name: "Zen Signature",
-            description: "The absolute pinnacle of luxury construction, offering expansive spaces, designer elevations, and opulent interior integrations.",
-            displayStartingRate: 3500,
-            internalRatePerSqft: 3500,
-            features: [
-                "Grand 11'6\" ceiling clearances",
-                "Extensive premium interior woodwork included",
-                "Opulent Jacuzzi or bathtub installations",
-                "Authentic Italian marble with precision epoxy grouting"
+            "Masonry & Plastering": [
+                {
+                    "title": "Standard Solid Concrete Blocks + M-Sand & P-Sand",
+                    "description": "Certified 8\", 6\" & 4\" high-density concrete blocks bonded with M-Sand for masonry and P-Sand for plastering works; Dr. Fixit 101 LW+ integrated weatherproofing."
+                }
             ],
-            detailedSections: {
-                "Architectural Planning": [
-                    "Ultra-premium 2D spatial layouts and master planning",
-                    "Signature 3D elevation designs capturing all viewing angles",
-                    "Multiple dedicated home visits by our senior design architects",
-                    "Interactive sketching and real-time design ideation workshops",
-                    "Immersive isometric room-by-room perspectives with cinematic lighting",
-                    "Bespoke landscaping, garden, and hardscape blueprints",
-                    "Fully interactive 3D virtual home walkthroughs",
-                    "Segmented 3D models breaking down individual floors for absolute clarity",
-                    "Instrument-based precision site topography survey",
-                    "Hyper-realistic VR property tours integrating customized furniture and decor"
-                ],
-                "Civil & Structural Framework": [
-                    "Palatial floor-to-ceiling vertical clearances of 11 feet 6 inches",
-                    "Top-tier steel reinforcement (JSW or TATA 500 TMT)",
-                    "Grade 53 cement sourced exclusively from ACC or Ultratech",
-                    "Custom-sized RCC underground sump tailored to exact occupancy",
-                    "High-grade M25 ready-mix concrete formulations",
-                    "Heavy-duty machine-cut solid blocks (8-inch and 4-inch variants)",
-                    "Anti-crack chicken mesh plastering utilizing double-washed manufactured sand",
-                    "Bespoke architectural features including courtyards and grand skylights",
-                    "Advanced exterior moisture defense using Dr.Fixit or FOSROC",
-                    "Crystalline waterproofing and cinder-filled sunken washrooms",
-                    "Concealed sanitary ledges built directly into the structure",
-                    "Superior concrete mat shuttering (chaape) techniques deployed",
-                    "Thorough pre-construction anti-termite ground treatment"
-                ],
-                "Drafting & Documentation": [
-                    "Extensive working drafts covering every single construction phase",
-                    "Detailed opening schedules for all doors and architectural fenestration",
-                    "Cross-section and precise building elevation blueprints",
-                    "Curated post-completion handover photography and portfolio"
-                ],
-                "Engineering & Analysis": [
-                    "Rigorous structural engineering as per national IS safety standards",
-                    "Flawless good-for-construction foundational drawings",
-                    "Comprehensive geotechnical soil bearing test reports",
-                    "Integrated overlapping of structural, architectural, and MEP plans",
-                    "3D structural stress-test and load analysis documentation"
-                ],
-                "Utility System Design": [
-                    "Precision electrical circuit, lighting, and switching plans",
-                    "Fresh water plumbing and optimized pressure routing",
-                    "Wastewater, sewage, and gradient drainage schematics",
-                    "Dedicated HVAC and climate control blueprints"
-                ],
-                "Statutory Approvals Support": [
-                    "End-to-end guidance for securing municipal plan sanctions",
-                    "Assistance with securing temporary construction electricity",
-                    "Liaison support for permanent power grid connections",
-                    "Help with establishing municipal water lines",
-                    "Sewage network connection support"
-                ],
-                "Flooring & Wall Cladding": [
-                    "Kitchen and Bedrooms: Premium high-durability, full-body vitrified tiles",
-                    "Main Living and Foyer: Authentic Italian marble or massive 4'x8' vitrified slabs with spacer grouting",
-                    "External Stairways: High-polish premium granite slabs",
-                    "Internal Stairways: Elegant wooden planks or equivalent finishes",
-                    "Balconies and Passages: Matte anti-skid outdoor safety tiles",
-                    "Washroom flooring: Textured anti-slip safety tiling",
-                    "Washroom walls: Full-height ceiling-level dado cladding with master bath accent walls",
-                    "Parking bays: Heavy-duty designer vehicular pavers",
-                    "Kitchen counters: Seamless premium quartz working surfaces",
-                    "Kitchen walls: Backsplash dado protecting culinary areas",
-                    "Puja room: Full-height wall tiling and dedicated premium granite pedestal",
-                    "Open terraces: Specialized thermal cooling tiles",
-                    "Unrestricted tile sizes with premium epoxy bathroom spacer grouting"
-                ],
-                "Paints & Coatings": [
-                    "Signature accents: 1 texture wall & 1 Royale Play wall for main living and master bedroom",
-                    "Interiors: Triple putty layer, single primer, and multiple coats of Royale paint",
-                    "Exteriors: Primer base paired with two coats of Apex Ultima weatherproof shield",
-                    "Preferred premium brands: Asian Paints, Berger, or Dulux"
-                ],
-                "Electrical Systems": [
-                    "Ample lighting and power sockets tailored to bespoke client needs",
-                    "Fully concealed heavy-duty, smoke-proof conduit networks",
-                    "Fire-retardant premium copper cabling by Havells",
-                    "Legrand Lyncus/Myrius switchgear series",
-                    "Comprehensive exterior and landscape electrification",
-                    "Premium ABB, Schneider, or Legrand main distribution boards",
-                    "Pre-wired network for advanced smart home automation and digital switches",
-                    "Air conditioning readiness seamlessly integrated throughout the house",
-                    "Dedicated EV charging outlet and CCTV surveillance prep",
-                    "Centralized UPS/Inverter integration point"
-                ],
-                "Plumbing & Water Management": [
-                    "Comprehensive interior and exterior water distribution",
-                    "Direct municipal water intake connections",
-                    "Independent kitchen borewell/municipal lines if required",
-                    "External sewage routing featuring robust inspection chambers",
-                    "Class B Ashirwad or Astral CPVC plumbing lines",
-                    "Solar water heater and electric geyser plumbing prep",
-                    "Eco-friendly rainwater harvesting ground recharge system",
-                    "Premium Sintex PVC rooftop storage reservoir"
-                ],
-                "Sanitary & Kitchen Fixtures": [
-                    "Premium kitchen sink basins and high-end culinary accessories including flexible taps",
-                    "Glass shower enclosures provided for homes exceeding 3500 sq.ft.",
-                    "Luxury Jaquar or Hindware CP and sanitary wares for attached baths",
-                    "Opulent Jacuzzi or bathtub installations provided for homes exceeding 4000 sq.ft."
-                ],
-                "Doors & Windows Setup": [
-                    "Main entrance: Grand teak wood frame and shutter",
-                    "Interior rooms: Sturdy Sal wood frames paired with flush doors",
-                    "Main door receives a premium PU finish spray polish",
-                    "High-end Ozone, Europa, or Dorma hardware with authentic brass main door fittings",
-                    "Top-tier wooden-finish UPVC windows or traditional wooden window systems",
-                    "Seamless pocket windows and sliding glass doors included"
-                ],
-                "Metal Fabrication": [
-                    "Custom-crafted designer main property gate with HPL board highlights",
-                    "Mild steel safety railings for external stairs and balconies",
-                    "Polished stainless steel railings for interior staircases",
-                    "Utility and balcony areas receive built-in waterproofing"
-                ],
-                "Boundary Enclosures": [
-                    "Size stone masonry trench foundation",
-                    "5-foot high solid block perimeter boundary enclosure",
-                    "Fully plastered and finished with exterior-grade paint",
-                    "Front boundary features designer architectural elements (slit openings, light drops, tile cladding, or HPL)"
-                ],
-                "Important Exclusions": [
-                    "Design modifications exceeding three major revisions will incur fees",
-                    "Government and statutory liaison charges are direct client expenses",
-                    "Municipal plan sanctioning fees are paid by the property owner",
-                    "Elevating the ground level beyond 18 inches will be billed extra",
-                    "Hard rock or complex soil excavation is billed separately",
-                    "Debris removal and fresh earth purchases are charged on actuals",
-                    "Market fluctuations exceeding 45% on raw materials adjusted collaboratively",
-                    "Door and window areas are capped at 30% of total built-up space",
-                    "Client must arrange temporary water and power for the construction crew",
-                    "Foundation depths extending beyond 5 feet are additionally charged"
-                ],
-                "Warranties Provided": [
-                    "12-month holistic structural construction guarantee",
-                    "10-year comprehensive terrace and wet-area waterproofing warranty",
-                    "All warranties are legally documented on official stamp paper"
-                ]
-            }
+            "Flooring & Surface Finishes": [
+                {
+                    "title": "Vitrified Tiles (Kajaria / Somany / Simpolo)",
+                    "description": "Living, Dining: Double-charged vitrified tiles up to \u20b955/sq.ft. Bedrooms & Kitchen: Vitrified tiles up to \u20b945/sq.ft. Balcony/Utility: Anti-skid ceramic tiles up to \u20b945/sq.ft."
+                }
+            ],
+            "Staircase & Parking": [
+                {
+                    "title": "Sadarahalli Granite & Heavy Duty Pavers",
+                    "description": "Staircase: Polished Sadarahalli granite up to \u20b980/sq.ft with chamfered edges. Parking: Heavy-duty exterior anti-skid parking tiles (up to \u20b940/sq.ft)."
+                }
+            ],
+            "Kitchen Countertop & Fixtures": [
+                {
+                    "title": "Nirali / Diamond Sink + Jet Black Granite",
+                    "description": "40/20mm polished granite counter up to \u20b9140/sq.ft, 2ft ceramic dadoing (\u20b945/sq.ft), Stainless Steel sink (\u20b94,000 value), and Jaquar/Parryware sink cock."
+                }
+            ],
+            "Sanitaryware & Bath Fittings": [
+                {
+                    "title": "Cera / Parryware / Jaquar Essco Series",
+                    "description": "CPVC/PVC by Supreme/Prince. Sanitary budget of \u20b940,000 per 1,000 sq.ft (prorated). Includes EWC wall/floor hung, health faucet, washbasin, and 2-in-1 wall mixer."
+                }
+            ],
+            "Bathroom Wall Dadoing": [
+                {
+                    "title": "Ceramic Wall Tiles (7' Lintel Height)",
+                    "description": "Anti-skid floor tiles and full 7ft wall dado tiles with designer highlighter concepts up to \u20b945/sq.ft."
+                }
+            ],
+            "Doors & Woodwork": [
+                {
+                    "title": "Veneer Flush Main Door + Sal Wood Frames",
+                    "description": "Main door: Veneer pressed flush shutter with 5\"x4\" Sal wood frame. Internal: Laminated membrane flush doors with 5\"x2.5\" Sal frames. Waterproof PVC bath doors."
+                }
+            ],
+            "Windows & Ventilation": [
+                {
+                    "title": "Jindal Aluminium 2-Track Glazed Sections",
+                    "description": "Powder-coated aluminium sliding windows with 5mm clear float glass and integrated MS safety grills (\u20b9130/sq.ft)."
+                }
+            ],
+            "Painting & Coatings": [
+                {
+                    "title": "Asian Paints Tractor Emulsion + Ace Exterior",
+                    "description": "Internal: 2 coats JK Wall Putty + 1 coat primer + 2 coats Tractor Emulsion. External: Asian Paints Ace weather-shield paint."
+                }
+            ],
+            "Electrical Infrastructure": [
+                {
+                    "title": "Anchor Roma Switches + Finolex / Anchor Wires",
+                    "description": "100% concealed fire-retardant copper wiring with Anchor Roma/GM modular switches, MCBs, DBs, and adequate AC/geyser points."
+                }
+            ],
+            "Fabrication & Water Storage": [
+                {
+                    "title": "Kaveri 1000L Overhead + 4000L Sump + MS Gate",
+                    "description": "16-gauge enamel-painted MS main gate (\u20b912,000 value), MS staircase railing, 4000L concrete sump, and 1000L double-layer overhead tank."
+                }
+            ]
         }
-    ],
-    fees: {
-        type: "percentage",
-        value: 0
     },
-    gst: {
-        type: "percentage",
-        value: 0
+    {
+        "id": "bz2_premium_comfort",
+        "name": "BZ-2 \u2022 PREMIUM COMFORT",
+        "description": "Carefully balanced for modern families desiring higher aesthetic freedom, upgraded woodwork, mesh-ready windows, and leading brand fixtures.",
+        "displayStartingRate": 2050,
+        "internalRatePerSqft": 2050,
+        "features": [
+            "Steel: Kamadhenu NXT / Meenakshi / Sunvik (Fe-550D)",
+            "Flooring: Vitrified Tiles / Polished Granite (Kajaria / Nitco)",
+            "Sanitary: Hindware Italian Collection / Parryware Elite",
+            "Doors: Indian / African Teak Main Door + Sal Frames"
+        ],
+        "detailedSections": {
+            "Integrated Design Scope": [
+                {
+                    "title": "Complete Comprehensive Package",
+                    "description": "Full Architectural space planning, 2D working floor plans, 3D photorealistic exterior view, and certified Structural drawings included."
+                }
+            ],
+            "Steel & Structural Reinforcement": [
+                {
+                    "title": "Kamadhenu NXT / Meenakshi / Sunvik (Fe-550D)",
+                    "description": "High-strength Fe-550D TMT reinforcement steel engineered for enhanced load dispersion and earthquake resistance."
+                }
+            ],
+            "Cement & Concrete Mix": [
+                {
+                    "title": "Ultratech / ACC Suraksha / Birla Super (53 & 43)",
+                    "description": "Top-grade Portland Pozzolana & Ordinary Portland Cement (Grade 53). Certified M25 Ready Mix Concrete for all RCC slabs and beams."
+                }
+            ],
+            "Masonry & Plastering": [
+                {
+                    "title": "Precision Concrete Blocks + M-Sand & P-Sand",
+                    "description": "High-compressive strength 8\", 6\", 4\" solid concrete blocks laid with M-Sand for masonry and P-Sand for plastering works; waterproofing by Dr. Fixit Fastflex membrane."
+                }
+            ],
+            "Flooring & Surface Finishes": [
+                {
+                    "title": "Vitrified Tiles / Polished Granite (Kajaria / Nitco)",
+                    "description": "Living, Dining: Designer vitrified tiles or fine granite up to \u20b970/sq.ft. Bedrooms & Kitchen: Premium vitrified flooring up to \u20b960/sq.ft. Balcony: Anti-skid tiles up to \u20b955/sq.ft."
+                }
+            ],
+            "Staircase & Parking": [
+                {
+                    "title": "Selected South Indian Granite / Marble",
+                    "description": "Staircase: Upgraded flamed/polished granite or marble up to \u20b990/sq.ft. Parking: Heavy-traffic designer paver tiles up to \u20b950/sq.ft."
+                }
+            ],
+            "Kitchen Countertop & Fixtures": [
+                {
+                    "title": "Nirali Elegance / Franke Sink + Granite Slab",
+                    "description": "40/20mm polished granite slab up to \u20b9170/sq.ft, ceramic dado tiles up to \u20b955/sq.ft (2ft height), single-bowl stainless steel sink (\u20b96,000 value), and Jaquar fittings."
+                }
+            ],
+            "Sanitaryware & Bath Fittings": [
+                {
+                    "title": "Hindware Italian Collection / Parryware Elite",
+                    "description": "Astral/Supreme CPVC plumbing pipes. Sanitary allowance of \u20b950,000 per 1,000 sq.ft. Includes rimless EWC, counter-top washbasin, and Jaquar single-lever diverters."
+                }
+            ],
+            "Bathroom Wall Dadoing": [
+                {
+                    "title": "Glazed Ceramic Tiles (7' Lintel Height)",
+                    "description": "Designer wall tiles up to \u20b955/sq.ft up to 7ft height with contrasting border bands and anti-skid floor tiles."
+                }
+            ],
+            "Doors & Woodwork": [
+                {
+                    "title": "Indian / African Teak Main Door + Sal Frames",
+                    "description": "Main entrance: Solid African/Indian Teak door & 5\"x4\" frame (\u20b925,000 value). Internal: Flush doors with premium mica laminates. Waterproof flush doors for baths."
+                }
+            ],
+            "Windows & Ventilation": [
+                {
+                    "title": "Jindal Heavy Aluminium / Standard UPVC 3-Track",
+                    "description": "3-Track Aluminium/UPVC windows with mosquito mesh shutter, glass panes, and fabricated MS window grills (\u20b9130/sq.ft)."
+                }
+            ],
+            "Painting & Coatings": [
+                {
+                    "title": "Asian Paints Tractor Shine + Ace Sparc Exterior",
+                    "description": "Internal: 2 coats Birla White Putty + 2 coats Tractor Emulsion Shine. External: Asian Paints Ace Sparc with primer protection."
+                }
+            ],
+            "Electrical Infrastructure": [
+                {
+                    "title": "Anchor Roma Urban / GM Four-Five + Finolex",
+                    "description": "Concealed FRLS copper wiring by Finolex/Polycab. Modular switchboards from Anchor Roma Urban / GM Modular with TV & Internet conduits."
+                }
+            ],
+            "Fabrication & Water Storage": [
+                {
+                    "title": "Sintex 1000L Tank + 6000L Sump + Designer MS Gate",
+                    "description": "Custom 16-gauge designer MS main gate (\u20b915,000 value), robust MS stair railings, 6000L underground sump, and 1000L overhead water tank."
+                }
+            ]
+        }
+    },
+    {
+        "id": "bz3_elite_ascent",
+        "name": "BZ-3 \u2022 ELITE ASCENT",
+        "description": "A refined construction tier featuring sound-insulating UPVC windows, pure African teak doors, premium sanitary collections, and enhanced weatherproofing.",
+        "displayStartingRate": 2250,
+        "internalRatePerSqft": 2250,
+        "features": [
+            "Steel: JSW Neosteel / Jindal Panther (Fe-550D TMT)",
+            "Flooring: Large Format GVT / Marble / Granite (Kajaria / Qutone)",
+            "Sanitary: Jaquar Kubix / Hindware Alchymi Collection",
+            "Doors: African Teak Main Door + Panelled Flush Doors"
+        ],
+        "detailedSections": {
+            "Integrated Design Scope": [
+                {
+                    "title": "Complete Comprehensive Package",
+                    "description": "Full Architectural planning, 2D detailed execution drawings, 3D exterior renders, structural engineering vetting, and electrical/plumbing layouts."
+                }
+            ],
+            "Steel & Structural Reinforcement": [
+                {
+                    "title": "JSW Neosteel / Jindal Panther (Fe-550D TMT)",
+                    "description": "Primary steel manufacturer certified Fe-550D bars offering superior elongation, bonding strength, and anti-corrosive properties."
+                }
+            ],
+            "Cement & Concrete Mix": [
+                {
+                    "title": "Ultratech Super / ACC Concrete Plus (Grade 53)",
+                    "description": "Premium structural cements offering early-strength gain and chemical resistance. Precision-batched M25 Ready Mix Concrete."
+                }
+            ],
+            "Masonry & Plastering": [
+                {
+                    "title": "Engineered Solid Blocks + M-Sand & P-Sand",
+                    "description": "High-density concrete masonry blocks bonded with M-Sand for masonry and P-Sand for plastering works; weather sealing using Fosroc Brushbond waterproof coating."
+                }
+            ],
+            "Flooring & Surface Finishes": [
+                {
+                    "title": "Large Format GVT / Marble / Granite (Kajaria / Qutone)",
+                    "description": "Living, Dining: Glazed vitrified tiles (800x1600mm) or marble up to \u20b990/sq.ft. Bedrooms: Wooden finish/GVT tiles up to \u20b975/sq.ft. Balconies: Matt anti-skid tiles up to \u20b965/sq.ft."
+                }
+            ],
+            "Staircase & Parking": [
+                {
+                    "title": "Fine Grain Granite / Marble + Designer Pavers",
+                    "description": "Staircase: Premium granite or polished marble up to \u20b9110/sq.ft. Parking: Heavy-duty non-slip parking pavers up to \u20b960/sq.ft."
+                }
+            ],
+            "Kitchen Countertop & Fixtures": [
+                {
+                    "title": "Carysil Quartz / Franke Sink + Black Pearl Granite",
+                    "description": "Premium granite countertop up to \u20b9220/sq.ft, luxury dado tiles up to \u20b965/sq.ft, single-bowl Quartz/Matt SS sink (\u20b98,000 value), and Jaquar Alive series tapware."
+                }
+            ],
+            "Sanitaryware & Bath Fittings": [
+                {
+                    "title": "Jaquar Kubix / Hindware Alchymi Collection",
+                    "description": "Plumbing by Ashirvad FlowGuard Plus CPVC. Sanitary budget of \u20b965,000 per 1,000 sq.ft. Includes wall-hung EWCs, vanity basins, diverters, and overhead rain showers."
+                }
+            ],
+            "Bathroom Wall Dadoing": [
+                {
+                    "title": "Vitrified Wall Tiles (7' Lintel Height)",
+                    "description": "Large-format vitrified/ceramic tiles up to \u20b965/sq.ft up to 7ft height with epoxy grouting in shower enclosures."
+                }
+            ],
+            "Doors & Woodwork": [
+                {
+                    "title": "African Teak Main Door + Panelled Flush Doors",
+                    "description": "Main door: African Teak carved wood shutter & 5\"x4\" teak frame (\u20b935,000 value). Internal: Waterproof panelled flush doors with luxury laminate finishes."
+                }
+            ],
+            "Windows & Ventilation": [
+                {
+                    "title": "UPVC System Windows (Prominance / Deceuninck)",
+                    "description": "Sound-attenuating UPVC 2.5-track windows with Saint-Gobain toughened/clear glass, SS mosquito mesh, and MS safety grills."
+                }
+            ],
+            "Painting & Finishes": [
+                {
+                    "title": "Asian Paints Apcolite Premium + Apex Weatherproof",
+                    "description": "Interior: Birla Wall Care putty + Apcolite Premium Emulsion. Exterior: Asian Paints Apex weatherproof exterior emulsion with anti-fungal shield."
+                }
+            ],
+            "Electrical Infrastructure": [
+                {
+                    "title": "Legrand Lyncus / GM Modular Zeno + Polycab FRLS",
+                    "description": "Polycab Flamegard FRLS copper wires with sleek modular switches from Legrand Lyncus / GM Zeno, complete with RCCB and surge protection."
+                }
+            ],
+            "Fabrication & Water Storage": [
+                {
+                    "title": "Sintex 1000L Tank + 6000L Sump + Heavy MS Gate",
+                    "description": "Heavy-gauge designer MS gate (\u20b918,000 value), custom MS staircase railings with enamel coat, 6000L sump, and 1000L double-layered tank."
+                }
+            ]
+        }
+    },
+    {
+        "id": "bz4_luxury_signature",
+        "name": "BZ-4 \u2022 LUXURY SIGNATURE",
+        "description": "An all-inclusive luxury offering that incorporates custom front elevation works, Burma border teak, Kohler sanitary fittings, and exquisite quartz/granite surfaces.",
+        "displayStartingRate": 2500,
+        "internalRatePerSqft": 2500,
+        "features": [
+            "Steel: JSW Neosteel 550D / SAIL TMT / Vizag Steel",
+            "Flooring: GVT / Imported Marble / Quartz (Kajaria Eternity / Nexion)",
+            "Sanitary: Kohler (July / Aleo) / Jaquar Artize Essentials",
+            "Doors: Border Burma Teak Main Door + Panelled Hardwood"
+        ],
+        "detailedSections": {
+            "Integrated Design Scope": [
+                {
+                    "title": "Complete Comprehensive Package + 3D Elevation",
+                    "description": "Architectural plans, structural engineering, MEP schematics, 3D Elevation modeling, AND front elevation construction works fully included in package."
+                }
+            ],
+            "Steel & Structural Reinforcement": [
+                {
+                    "title": "JSW Neosteel 550D / SAIL TMT / Vizag Steel",
+                    "description": "Top-tier primary steel with high bonding strength and thermo-mechanical treatment ensuring superior earthquake resistance."
+                }
+            ],
+            "Cement & Concrete Mix": [
+                {
+                    "title": "Ultratech Super / ACC Gold / Birla A1 (Grade 53)",
+                    "description": "Premium water-repellent cement for subterranean structures and grade 53 OPC/PPC for superstructure with M25 computer-batched RMC."
+                }
+            ],
+            "Masonry & Plastering": [
+                {
+                    "title": "Certified Solid Blocks + Fosroc Weatherproofing",
+                    "description": "High-density concrete blocks bonded with M-Sand for masonry and P-Sand for plastering works. All terraces and wet areas sealed with Fosroc Nitocote CM210 waterproofing."
+                }
+            ],
+            "Flooring & Surface Finishes": [
+                {
+                    "title": "GVT / Imported Marble / Quartz (Kajaria Eternity / Nexion)",
+                    "description": "Living, Dining: GVT large slabs, designer marble, or granite up to \u20b9120/sq.ft. Bedrooms: Wooden flooring / GVT up to \u20b9100/sq.ft. Balconies: Rustic tiles up to \u20b980/sq.ft."
+                }
+            ],
+            "Staircase & Parking": [
+                {
+                    "title": "Polished Black Galaxy Granite / Italian Blend Marble",
+                    "description": "Staircase: High-gloss granite/marble up to \u20b9130/sq.ft with rounded bull-nosing. Parking: Heavy-duty exterior parking pavers up to \u20b970/sq.ft."
+                }
+            ],
+            "Kitchen Countertop & Fixtures": [
+                {
+                    "title": "Carysil Composite Quartz / Futura Sink + Granite",
+                    "description": "40/20mm premium granite/quartz countertop up to \u20b9250/sq.ft, luxury dadoing up to \u20b980/sq.ft, Carysil granite sink (\u20b912,000 value), and Kohler pull-out faucet."
+                }
+            ],
+            "Sanitaryware & Bath Fittings": [
+                {
+                    "title": "Kohler (July / Aleo) / Jaquar Artize Essentials",
+                    "description": "Ashirvad FlowGuard Plus CPVC pipes. Sanitary allowance of \u20b980,000 per 1,000 sq.ft. Includes rimless wall-hung WC, soft-close seats, thermostatic diverters."
+                }
+            ],
+            "Bathroom Wall Dadoing": [
+                {
+                    "title": "Designer GVT Wall Slabs (7' Lintel Height)",
+                    "description": "Luxury vitrified/ceramic tile concepts up to \u20b980/sq.ft with seamless epoxy joints and anti-slip flooring."
+                }
+            ],
+            "Doors & Woodwork": [
+                {
+                    "title": "Border Burma Teak Main Door + Panelled Hardwood",
+                    "description": "Main door: Border Burma Teak door & frame with heavy brass/SS hardware (\u20b950,000 value). Internal: Hardwood panelled doors on seasoned Sal frames."
+                }
+            ],
+            "Windows & Ventilation": [
+                {
+                    "title": "Fenesta / Kommerling UPVC Windows with Mesh",
+                    "description": "High-insulation multi-chamber UPVC windows from Fenesta/Kommerling with Saint-Gobain float glass, SS mesh, and precision grills (\u20b9130/sq.ft)."
+                }
+            ],
+            "Painting & Finishes": [
+                {
+                    "title": "Asian Paints Apcolite Satin + Apex Ultima",
+                    "description": "Interior: Asian Paints Royale wall base + Apcolite Satin smooth finish. Exterior: Asian Paints Apex Ultima weather-defense paint."
+                }
+            ],
+            "Electrical Infrastructure": [
+                {
+                    "title": "Schneider AvatarOn / Legrand Mylinc + Havells LifeLine",
+                    "description": "Havells LifeLine Plus / RR Kabel fireproof wires paired with premium designer flat-switch plates from Schneider AvatarOn or Legrand Mylinc."
+                }
+            ],
+            "Fabrication & Water Storage": [
+                {
+                    "title": "Sintex 1500L Triple-Layer + 7000L Sump + Sal Handrail",
+                    "description": "16-gauge Designer MS gate (\u20b922,000 value), MS staircase railings with polished Sal wood top rail, 7000L sump, and 1500L triple-layer overhead tank."
+                }
+            ]
+        }
+    },
+    {
+        "id": "bz5_zenith_royale",
+        "name": "BZ-5 \u2022 ZENITH ROYALE",
+        "description": "Engineered for clients desiring the very best in building materials\u2014incorporating authentic P-Sand plastering, Burma Teak doors, Grohe/Kohler fixtures, and SS railings.",
+        "displayStartingRate": 2800,
+        "internalRatePerSqft": 2800,
+        "features": [
+            "Steel: Tata Tiscon 550D / JSW Neosteel Pure TMT",
+            "Flooring: Imported Marble / Brazilian Granite / Large GVT",
+            "Sanitary: Grohe (Eurosmart) / Kohler (ModernLife Series)",
+            "Doors: Pure Burma Teak Main Door + Burma Teak Puja Room"
+        ],
+        "detailedSections": {
+            "Integrated Design Scope": [
+                {
+                    "title": "Master Architectural & Structural Package",
+                    "description": "End-to-end Architectural design, 3D Elevation renders, Structural validation, MEP layout schematics, and full Elevation construction works included."
+                }
+            ],
+            "Steel & Structural Reinforcement": [
+                {
+                    "title": "Tata Tiscon 550D / JSW Neosteel Pure TMT",
+                    "description": "India's highest grade primary reinforcement steel with superior ductility, corrosion resistance, and seismic load endurance."
+                }
+            ],
+            "Cement & Concrete Mix": [
+                {
+                    "title": "Ultratech Weather Pro / ACC Gold (Grade 53)",
+                    "description": "Water-repellent specialty cement for foundations & Grade 53 OPC/PPC for all structural framing with M25 RMC design mix."
+                }
+            ],
+            "Masonry & Plastering": [
+                {
+                    "title": "M-Sand Masonry & P-Sand Plastering",
+                    "description": "Concrete block masonry with M-Sand for masonry and fine-grade P-Sand for internal plastering works for mirror-smooth wall finishes; Sika/Fosroc multi-coat waterproofing."
+                }
+            ],
+            "Flooring & Surface Finishes": [
+                {
+                    "title": "Imported Marble / Brazilian Granite / Large GVT",
+                    "description": "Living, Dining: Pure Indian/Imported Marble, Brazilian Granite, or 1200x1800mm GVT up to \u20b9160/sq.ft. Bedrooms: Wooden/Granite up to \u20b9130/sq.ft."
+                }
+            ],
+            "Staircase & Parking": [
+                {
+                    "title": "Exotic Granite / Polished Marble Slabs",
+                    "description": "Staircase: High-end marble or exotic granite up to \u20b9160/sq.ft. Parking: Premium anti-skid heavy vitrified parking tiles up to \u20b990/sq.ft."
+                }
+            ],
+            "Kitchen Countertop & Fixtures": [
+                {
+                    "title": "Blanco / Carysil Enigma Sink + Quartz / Granite",
+                    "description": "Granite/KalingaStone Quartz countertop up to \u20b9300/sq.ft, designer dado up to \u20b9100/sq.ft, Carysil granite sink (\u20b915,000 value), and Grohe/Kohler tapware."
+                }
+            ],
+            "Sanitaryware & Bath Fittings": [
+                {
+                    "title": "Grohe (Eurosmart) / Kohler (ModernLife Series)",
+                    "description": "Astral CPVC PRO pipes. Sanitary budget of \u20b995,000 per 1,000 sq.ft. Includes concealed cisterns, overhead rain showers, and single-lever diverters."
+                }
+            ],
+            "Bathroom Wall Dadoing": [
+                {
+                    "title": "Full Height Luxury Tile Slabs (Up to 8ft)",
+                    "description": "Imported-style continuous large-format wall tiles up to \u20b9100/sq.ft up to false ceiling height with specialized epoxy grouting."
+                }
+            ],
+            "Doors & Woodwork": [
+                {
+                    "title": "Pure Burma Teak Main Door + Burma Teak Puja Room",
+                    "description": "Main door: Pure Burma Teak wood door & 5\"x4\" frame (\u20b995,000 value). Dedicated Burma Teak Puja room door & frame (\u20b935,000 value). Hardwood panelled room doors."
+                }
+            ],
+            "Windows & Ventilation": [
+                {
+                    "title": "Schuco / Fenesta German Profile UPVC Windows",
+                    "description": "Heavy-gauge soundproof UPVC windows with double-glazed / laminated toughened glass, SS bug mesh, and MS safety grills (\u20b9150/sq.ft)."
+                }
+            ],
+            "Painting & Finishes": [
+                {
+                    "title": "Asian Paints Royale Luxury Emulsion + Apex Ultima",
+                    "description": "Interior: Asian Paints Royale Luxury silky emulsion with 2 coats Birla Putty. Exterior: Asian Paints Apex Ultima Protek with 7-year anti-fading shield."
+                }
+            ],
+            "Electrical Infrastructure": [
+                {
+                    "title": "Legrand Arteor / GM Smart Touch + RR Kabel Flamex",
+                    "description": "RR Kabel Flamex / Finolex wires paired with luxury modular plates from Legrand Arteor / Schneider Unica Pure / GM Smart IoT Touch."
+                }
+            ],
+            "Fabrication & Water Storage": [
+                {
+                    "title": "Stainless Steel (SS) Railings + 7000L Sump + 2000L Tank",
+                    "description": "Heavy 16-gauge designer MS gate (\u20b928,000 value), rust-proof SS 304 staircase railings, 7000L sump, and 2000L triple-layer Sintex tank."
+                }
+            ]
+        }
+    },
+    {
+        "id": "bz6_imperial_zen",
+        "name": "BZ-6 \u2022 IMPERIAL ZEN",
+        "description": "The ultimate luxury statement featuring Italian Marble allowances, 10.5ft clear ceiling height, 8ft Royal Burma Teak portals, TOTO/Grohe fittings, and German fenestration.",
+        "displayStartingRate": 3200,
+        "internalRatePerSqft": 3200,
+        "features": [
+            "Steel: Tata Tiscon 550D Superlinks / JSW Neosteel CRS",
+            "Flooring: Italian Marble / Imported Statuario / Brazilian Stone",
+            "Sanitary: TOTO / Grohe (Grandera) / Kohler (Artifacts)",
+            "Doors: 8ft Grand Royal Burma Teak Architrave + Puja Enclosure"
+        ],
+        "detailedSections": {
+            "Integrated Design Scope": [
+                {
+                    "title": "Bespoke Architectural, Structural & Elevation Masterclass",
+                    "description": "Complete custom Architecture, 3D Elevation modeling, Interior 3D concepts, Structural vetting, and comprehensive Elevation construction works included."
+                }
+            ],
+            "Steel & Structural Reinforcement": [
+                {
+                    "title": "Tata Tiscon 550D Superlinks / JSW Neosteel CRS",
+                    "description": "Top-echelon Corrosion Resistant Steel (CRS) and high-ductility Fe-550D TMT bars for maximum generational durability."
+                }
+            ],
+            "Cement & Concrete Mix": [
+                {
+                    "title": "Ultratech Weather Pro / Lafarge Concreto (Grade 53)",
+                    "description": "Hydrophobic high-performance cement and high-strength M25/M30 concrete with precision curing additives. Clear ceiling height raised to 10.5 feet."
+                }
+            ],
+            "Masonry & Plastering": [
+                {
+                    "title": "P-Sand Plastering + Sika Elastomeric Waterproofing",
+                    "description": "High-density concrete masonry with M-Sand for masonry and P-Sand for plastering works. Multi-layer elastomeric waterproofing by Sika / Fosroc on all terraces, sunshades, and basements."
+                }
+            ],
+            "Flooring & Surface Finishes": [
+                {
+                    "title": "Italian Marble / Imported Statuario / Brazilian Stone",
+                    "description": "Living, Dining: Authentic Italian Marble (Bottochino/Dyna/Statuario) or premium stone up to \u20b9220/sq.ft. Bedrooms: Real hardwood / imported stone up to \u20b9180/sq.ft."
+                }
+            ],
+            "Staircase & Parking": [
+                {
+                    "title": "Italian Marble / Full-Body Quartz + Granite Pavers",
+                    "description": "Staircase: Italian marble or moulded granite up to \u20b9220/sq.ft. Parking: Heavy-duty imported vitrified pavers up to \u20b9110/sq.ft."
+                }
+            ],
+            "Kitchen Countertop & Fixtures": [
+                {
+                    "title": "Full-Body Sintered Quartz Slab + Blanco Dual Sink",
+                    "description": "Seamless Quartz/Porcelain slab countertop up to \u20b9350/sq.ft, luxury dado tiles up to \u20b9130/sq.ft, Blanco Germany / Franke dual sink (\u20b920,000 value), and Grohe SmartControl."
+                }
+            ],
+            "Sanitaryware & Bath Fittings": [
+                {
+                    "title": "TOTO / Grohe (Grandera) / Kohler (Artifacts)",
+                    "description": "Astral Silencio low-noise drainage & CPVC PRO supply. Sanitary allowance of \u20b91,20,000 per 1,000 sq.ft. Includes Geberit concealed cisterns and sensor fittings."
+                }
+            ],
+            "Bathroom Wall Dadoing": [
+                {
+                    "title": "Full-Height Italian Finish Slabs (Ceiling Height)",
+                    "description": "Full-height book-matched large porcelain/vitrified slabs up to \u20b9130/sq.ft with custom shower niches and epoxy grout."
+                }
+            ],
+            "Doors & Woodwork": [
+                {
+                    "title": "8ft Grand Royal Burma Teak Architrave + Puja Enclosure",
+                    "description": "Main entrance: 8ft grand Burma Teak door with heavy brass architrave (\u20b91,20,000 value). Dedicated Burma Teak carved Puja enclosure (\u20b955,000 value). Hardwood panel doors."
+                }
+            ],
+            "Windows & Ventilation": [
+                {
+                    "title": "Sch\u00fcco Slimline Aluminium / Reynaers German Systems",
+                    "description": "Architectural-grade Schuco/Reynaers acoustic double-glazed windows with invisible bug mesh and bespoke MS safety grills (\u20b9150/sq.ft)."
+                }
+            ],
+            "Painting & Finishes": [
+                {
+                    "title": "Asian Paints Royale Royale Aspire / Matt + Apex Protek",
+                    "description": "Interior: Asian Paints Royale Aspire/Matt luxury washable finish. Exterior: Asian Paints Apex Ultima Protek Duralife (10-Year Warranty)."
+                }
+            ],
+            "Electrical Infrastructure": [
+                {
+                    "title": "Lutron / Schneider Vivace / Legrand Arteor Smart IoT",
+                    "description": "Lapp India / Finolex Platinum wiring with smart home automation-ready modular plates from Schneider Vivace / Legrand Arteor / Touch IoT."
+                }
+            ],
+            "Fabrication & Water Storage": [
+                {
+                    "title": "SS 304 Grade Railings + 8000L Sump + Grand MS Gate",
+                    "description": "Heavy 14-gauge luxury entrance gate (\u20b960,000 value), SS 304 grade glass/steel staircase railings, 8000L sump, and 2000L triple-layer tank."
+                }
+            ]
+        }
     }
+]
 };

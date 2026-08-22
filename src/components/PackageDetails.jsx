@@ -19,8 +19,13 @@ export default function PackageDetails({ pkg }) {
             return (
               <div key={key}>
                 <div className="accordion-section-title" style={{textTransform: 'capitalize'}}>{sectionName}</div>
-                <ul style={{marginBottom: '1rem', paddingLeft: 0}}>
-                  {items.map((item, i) => <li key={i}>{item}</li>)}
+                <ul style={{marginBottom: '1rem', paddingLeft: 0, listStyle: 'none'}}>
+                  {items.map((item, i) => (
+                    <li key={i}>
+                      <strong style={{ color: 'var(--color-text-main)' }}>{item.title}</strong><br/>
+                      {item.description}
+                    </li>
+                  ))}
                 </ul>
               </div>
             );

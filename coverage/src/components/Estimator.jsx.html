@@ -1,0 +1,1375 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/components/Estimator.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> Estimator.jsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">46.15% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>48/104</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">51.68% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>46/89</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">23.52% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>8/34</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">49.47% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>47/95</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a>
+<a name='L334'></a><a href='#L334'>334</a>
+<a name='L335'></a><a href='#L335'>335</a>
+<a name='L336'></a><a href='#L336'>336</a>
+<a name='L337'></a><a href='#L337'>337</a>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a>
+<a name='L364'></a><a href='#L364'>364</a>
+<a name='L365'></a><a href='#L365'>365</a>
+<a name='L366'></a><a href='#L366'>366</a>
+<a name='L367'></a><a href='#L367'>367</a>
+<a name='L368'></a><a href='#L368'>368</a>
+<a name='L369'></a><a href='#L369'>369</a>
+<a name='L370'></a><a href='#L370'>370</a>
+<a name='L371'></a><a href='#L371'>371</a>
+<a name='L372'></a><a href='#L372'>372</a>
+<a name='L373'></a><a href='#L373'>373</a>
+<a name='L374'></a><a href='#L374'>374</a>
+<a name='L375'></a><a href='#L375'>375</a>
+<a name='L376'></a><a href='#L376'>376</a>
+<a name='L377'></a><a href='#L377'>377</a>
+<a name='L378'></a><a href='#L378'>378</a>
+<a name='L379'></a><a href='#L379'>379</a>
+<a name='L380'></a><a href='#L380'>380</a>
+<a name='L381'></a><a href='#L381'>381</a>
+<a name='L382'></a><a href='#L382'>382</a>
+<a name='L383'></a><a href='#L383'>383</a>
+<a name='L384'></a><a href='#L384'>384</a>
+<a name='L385'></a><a href='#L385'>385</a>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a>
+<a name='L388'></a><a href='#L388'>388</a>
+<a name='L389'></a><a href='#L389'>389</a>
+<a name='L390'></a><a href='#L390'>390</a>
+<a name='L391'></a><a href='#L391'>391</a>
+<a name='L392'></a><a href='#L392'>392</a>
+<a name='L393'></a><a href='#L393'>393</a>
+<a name='L394'></a><a href='#L394'>394</a>
+<a name='L395'></a><a href='#L395'>395</a>
+<a name='L396'></a><a href='#L396'>396</a>
+<a name='L397'></a><a href='#L397'>397</a>
+<a name='L398'></a><a href='#L398'>398</a>
+<a name='L399'></a><a href='#L399'>399</a>
+<a name='L400'></a><a href='#L400'>400</a>
+<a name='L401'></a><a href='#L401'>401</a>
+<a name='L402'></a><a href='#L402'>402</a>
+<a name='L403'></a><a href='#L403'>403</a>
+<a name='L404'></a><a href='#L404'>404</a>
+<a name='L405'></a><a href='#L405'>405</a>
+<a name='L406'></a><a href='#L406'>406</a>
+<a name='L407'></a><a href='#L407'>407</a>
+<a name='L408'></a><a href='#L408'>408</a>
+<a name='L409'></a><a href='#L409'>409</a>
+<a name='L410'></a><a href='#L410'>410</a>
+<a name='L411'></a><a href='#L411'>411</a>
+<a name='L412'></a><a href='#L412'>412</a>
+<a name='L413'></a><a href='#L413'>413</a>
+<a name='L414'></a><a href='#L414'>414</a>
+<a name='L415'></a><a href='#L415'>415</a>
+<a name='L416'></a><a href='#L416'>416</a>
+<a name='L417'></a><a href='#L417'>417</a>
+<a name='L418'></a><a href='#L418'>418</a>
+<a name='L419'></a><a href='#L419'>419</a>
+<a name='L420'></a><a href='#L420'>420</a>
+<a name='L421'></a><a href='#L421'>421</a>
+<a name='L422'></a><a href='#L422'>422</a>
+<a name='L423'></a><a href='#L423'>423</a>
+<a name='L424'></a><a href='#L424'>424</a>
+<a name='L425'></a><a href='#L425'>425</a>
+<a name='L426'></a><a href='#L426'>426</a>
+<a name='L427'></a><a href='#L427'>427</a>
+<a name='L428'></a><a href='#L428'>428</a>
+<a name='L429'></a><a href='#L429'>429</a>
+<a name='L430'></a><a href='#L430'>430</a>
+<a name='L431'></a><a href='#L431'>431</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useState, useEffect } from 'react';
+import PackageDetails from './PackageDetails';
+import FormattedPackageName from './FormattedPackageName';
+&nbsp;
+export default function Estimator({ config }) {
+  const [activeTab, setActiveTab] = useState('quick');
+  const [selectedPkgId, setSelectedPkgId] = useState('');
+  const [quickArea, setQuickArea] = useState('');
+  const [isPulsing, setIsPulsing] = useState(false);
+  
+  const [floors, setFloors] = useState([
+    { id: '1', type: 'Ground Floor', length: '', width: '' }
+  ]);
+&nbsp;
+  // Lead Form State
+  const [leadName, setLeadName] = useState('');
+  const [leadPhone, setLeadPhone] = useState('');
+  const [leadEmail, setLeadEmail] = useState('');
+  const [leadError, setLeadError] = useState(false);
+  const [leadSuccess, setLeadSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [feedback, setFeedback] = useState('');
+&nbsp;
+  useEffect(() =&gt; {
+    const savedPkg = localStorage.getItem('selectedPackage');
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (savedPkg) {
+<span class="cstat-no" title="statement not covered" >      setSelectedPkgId(savedPkg);</span>
+<span class="cstat-no" title="statement not covered" >      localStorage.removeItem('selectedPackage'); // clear it</span>
+    }
+  }, []);
+&nbsp;
+  const <span class="fstat-no" title="function not covered" >handleAddFloor = () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    setFloors([...floors, { id: Date.now().toString(), type: 'Floor 1', length: '', width: '' }]);</span>
+  };
+&nbsp;
+  const <span class="fstat-no" title="function not covered" >handleRemoveFloor = (i</span>d) =&gt; {
+<span class="cstat-no" title="statement not covered" >    setFloors(floors.<span class="fstat-no" title="function not covered" >filter(f</span> =&gt; <span class="cstat-no" title="statement not covered" >f.id !== id)</span>);</span>
+  };
+&nbsp;
+  const <span class="fstat-no" title="function not covered" >handleUpdateFloor = (i</span>d, field, value) =&gt; {
+<span class="cstat-no" title="statement not covered" >    setFloors(floors.<span class="fstat-no" title="function not covered" >map(f</span> =&gt; <span class="cstat-no" title="statement not covered" >f.id === id ? { ...f, [field]: value } : f)</span>);</span>
+  };
+&nbsp;
+  // Calculations
+  const calcTotalArea = () =&gt; {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (activeTab === 'quick') {
+      return parseFloat(quickArea) || 0;
+    }
+<span class="cstat-no" title="statement not covered" >    return floors.<span class="fstat-no" title="function not covered" >reduce((s</span>um, f) =&gt; <span class="cstat-no" title="statement not covered" >sum + ((parseFloat(f.length) || 0) * (parseFloat(f.width) || 0)), 0</span>);</span>
+  };
+&nbsp;
+  const totalArea = calcTotalArea();
+  const pkgIndex = config.packages.findIndex(p =&gt; p.id === selectedPkgId);
+  const pkg = pkgIndex &gt;= 0 ? config.packages[pkgIndex] : null;
+&nbsp;
+  let totalCost = 0;
+  if (pkg &amp;&amp; totalArea &gt; 0) {
+    const baseCost = totalArea * pkg.internalRatePerSqft;
+    const feesAmount = baseCost * (config.fees.value / 100);
+    const subtotal = baseCost + feesAmount;
+    const gstAmount = subtotal * (config.gst.value / 100);
+    totalCost = subtotal + gstAmount;
+  }
+&nbsp;
+  // Trigger calculate &amp; smooth scroll to quote
+  const <span class="fstat-no" title="function not covered" >handleCalculate = () =&gt; {</span>
+    const el = <span class="cstat-no" title="statement not covered" >document.querySelector('.quote-panel');</span>
+<span class="cstat-no" title="statement not covered" >    if (el) {</span>
+      const y = <span class="cstat-no" title="statement not covered" >el.getBoundingClientRect().top + window.scrollY - 100;</span>
+<span class="cstat-no" title="statement not covered" >      window.scrollTo({ top: y, behavior: 'smooth' });</span>
+<span class="cstat-no" title="statement not covered" >      setIsPulsing(true);</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      setTimeout(() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etIsPulsing(false), 9</span>00);</span>
+    }
+  };
+&nbsp;
+  // Handle lead submission
+  const handleLeadSubmit = <span class="fstat-no" title="function not covered" >async (e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >    e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >    if (!leadPhone.trim() &amp;&amp; !leadEmail.trim()) {</span>
+<span class="cstat-no" title="statement not covered" >      setLeadError(true);</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    setLeadError(false);</span>
+<span class="cstat-no" title="statement not covered" >    setIsSubmitting(true);</span>
+    
+    const form = <span class="cstat-no" title="statement not covered" >e.target;</span>
+    const formData = <span class="cstat-no" title="statement not covered" >new FormData(form);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    try {</span>
+      const response = <span class="cstat-no" title="statement not covered" >await fetch(form.action, {</span>
+        method: 'POST',
+        body: formData
+      });
+&nbsp;
+      let result = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >      try {</span>
+<span class="cstat-no" title="statement not covered" >        result = await response.json();</span>
+      } catch (e) {}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (response.ok) {</span>
+<span class="cstat-no" title="statement not covered" >        setLeadSuccess(true);</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        throw new Error(result.message || 'Network response was not ok');</span>
+      }
+    } catch (err) {
+<span class="cstat-no" title="statement not covered" >      console.error(err);</span>
+<span class="cstat-no" title="statement not covered" >      alert('Error submitting form: ' + err.message);</span>
+    } finally {
+<span class="cstat-no" title="statement not covered" >      setIsSubmitting(false);</span>
+    }
+  };
+&nbsp;
+  const floorBreakdownText = activeTab === 'quick' 
+    ? 'Quick Estimate Mode' 
+    : <span class="branch-1 cbranch-no" title="branch not covered" >floors.<span class="fstat-no" title="function not covered" >filter(<span class="cstat-no" title="statement not covered" >f</span> =&gt; (parseFloat(f.length) || 0) &gt; 0 &amp;&amp; (parseFloat(f.width) || 0) &gt; 0)</span></span>
+            .<span class="fstat-no" title="function not covered" >map(f</span> =&gt; <span class="cstat-no" title="statement not covered" >`- ${f.type}: ${f.length}ft x ${f.width}ft = ${(parseFloat(f.length) || 0) * (parseFloat(f.width) || 0)} sqft`)</span>
+            .join('\n');
+&nbsp;
+  let packageDetailsText = '';
+  if (pkg) {
+    packageDetailsText += "KEY FEATURES:\n";
+    packageDetailsText += pkg.features.<span class="fstat-no" title="function not covered" >map(f</span> =&gt; <span class="cstat-no" title="statement not covered" >`- ${f}`)</span>.join('\n');
+    packageDetailsText += "\n\nDETAILED SPECIFICATIONS:\n";
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (pkg.detailedSections) {
+      Object.entries(pkg.detailedSections).<span class="fstat-no" title="function not covered" >forEach(([</span>key, items]) =&gt; {
+        const sectionName = <span class="cstat-no" title="statement not covered" >key.replace(/([A-Z])/g, ' $1').trim().toUpperCase();</span>
+<span class="cstat-no" title="statement not covered" >        packageDetailsText += `\n[${sectionName}]\n`;</span>
+<span class="cstat-no" title="statement not covered" >        packageDetailsText += items.<span class="fstat-no" title="function not covered" >map(i</span>tem =&gt; <span class="cstat-no" title="statement not covered" >`- ${item}`)</span>.join('\n');</span>
+      });
+    }
+  }
+&nbsp;
+  return (
+    &lt;section id="page-estimator" className="page-section active"&gt;
+      &lt;div className="container section"&gt;
+        &lt;div className="text-center" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}&gt;
+          &lt;div className="estimator-visual" style={{marginBottom: '1rem'}}&gt;
+            &lt;svg viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg" className="blueprint-anim" style={{height: '220px', maxWidth: '100%'}}&gt;
+              {/* Abstract grid background */}
+              &lt;path d="M50 50 L50 250 M150 50 L150 250 M250 50 L250 250 M350 50 L350 250 M450 50 L450 250" stroke="rgba(249,115,22,0.1)" strokeWidth="1" strokeDasharray="4 4" /&gt;
+              &lt;path d="M50 50 L450 50 M50 150 L450 150 M50 250 L450 250" stroke="rgba(249,115,22,0.1)" strokeWidth="1" strokeDasharray="4 4" /&gt;
+              
+              {/* Desk Line */}
+              &lt;path d="M20 250 L480 250" stroke="var(--color-text-main)" strokeWidth="4" strokeLinecap="round" className="anim-path" /&gt;
+              
+              {/* Big Calculator on Desk (Right) */}
+              &lt;rect x="300" y="100" width="120" height="150" rx="10" stroke="var(--color-accent)" strokeWidth="4" className="anim-path delay-1" /&gt;
+              &lt;rect x="315" y="120" width="90" height="30" rx="4" stroke="rgba(249,115,22,0.4)" strokeWidth="2" className="anim-path delay-2" /&gt;
+              {/* Buttons */}
+              &lt;circle cx="330" cy="170" r="5" fill="var(--color-accent)" className="anim-fade delay-3" /&gt;
+              &lt;circle cx="360" cy="170" r="5" fill="var(--color-accent)" className="anim-fade delay-4" /&gt;
+              &lt;circle cx="390" cy="170" r="5" fill="var(--color-accent)" className="anim-fade delay-5" /&gt;
+              &lt;circle cx="330" cy="200" r="5" fill="var(--color-accent)" className="anim-fade delay-3" /&gt;
+              &lt;circle cx="360" cy="200" r="5" fill="var(--color-accent)" className="anim-fade delay-4" /&gt;
+              &lt;circle cx="390" cy="200" r="5" fill="var(--color-accent)" className="anim-fade delay-5" /&gt;
+              &lt;circle cx="330" cy="230" r="5" fill="var(--color-accent)" className="anim-fade delay-3" /&gt;
+              &lt;circle cx="360" cy="230" r="5" fill="var(--color-accent)" className="anim-fade delay-4" /&gt;
+              &lt;circle cx="390" cy="230" r="5" fill="var(--color-accent)" className="anim-fade delay-5" /&gt;
+              
+              {/* Graph/Chart on desk in middle */}
+              &lt;rect x="180" y="180" width="90" height="70" stroke="rgba(249,115,22,0.3)" strokeWidth="3" className="anim-path delay-1" /&gt;
+              &lt;path d="M190 230 L210 200 L230 215 L260 190" stroke="var(--color-accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="anim-path delay-2" /&gt;
+              
+              {/* Person Sitting at Desk (Left) */}
+              &lt;g transform="translate(0, 55)"&gt;
+                {/* Head */}
+                &lt;circle cx="120" cy="100" r="30" stroke="var(--color-text-main)" strokeWidth="4" className="anim-path delay-2" /&gt;
+                
+                {/* Thinking Bubbles */}
+                &lt;circle cx="150" cy="65" r="4" stroke="var(--color-accent)" strokeWidth="2" fill="none" className="anim-fade delay-3" /&gt;
+                &lt;circle cx="170" cy="45" r="7" stroke="var(--color-accent)" strokeWidth="2" fill="none" className="anim-fade delay-4" /&gt;
+                
+                {/* Thought Cloud */}
+                &lt;path d="M 190 40 C 190 20, 220 15, 230 30 C 250 10, 290 20, 280 45 C 300 55, 290 80, 270 75 C 260 90, 210 90, 200 75 C 180 75, 180 50, 190 40 Z" stroke="var(--color-accent)" strokeWidth="3" fill="none" className="anim-path delay-5" /&gt;
+              &lt;/g&gt;
+              
+              {/* Body (Back leaning over desk) */}
+              &lt;path d="M80 250 C80 160, 160 160, 160 250" stroke="var(--color-text-main)" strokeWidth="4" fill="none" className="anim-path delay-3" /&gt;
+              
+              {/* Floating Math Symbols */}
+              &lt;path d="M 330 60 L 350 60 M 340 50 L 340 70" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" className="anim-fade delay-1" /&gt; {/* Plus */}
+              &lt;path d="M 430 120 L 445 120 M 430 125 L 445 125" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" className="anim-fade delay-3" /&gt; {/* Equals */}
+              &lt;path d="M 400 70 L 415 85 M 415 70 L 400 85" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" className="anim-fade delay-5" /&gt; {/* Multiply */}
+            &lt;/svg&gt;
+          &lt;/div&gt;
+          &lt;h2 className="section-title"&gt;
+            &lt;span style={{ color: 'var(--color-accent)' }}&gt;Build&lt;/span&gt; Estimator
+          &lt;/h2&gt;
+          &lt;p className="section-subtitle"&gt;Get an instant, transparent quote for your project based on your requirements.&lt;/p&gt;
+          &lt;p style={{fontSize: '0.875rem', color: 'var(--color-accent)', marginTop: '0.5rem', fontWeight: '600'}}&gt;⚠️ All prices mentioned are exclusive of GST.&lt;/p&gt;
+        &lt;/div&gt;
+&nbsp;
+        &lt;div className="estimator-wrapper"&gt;
+          &lt;div className="estimator-tabs"&gt;
+            &lt;button className={`tab-btn ${activeTab === 'quick' ? 'active' : <span class="branch-1 cbranch-no" title="branch not covered" >''}`} <span class="fstat-no" title="function not covered" >o</span>nClick={() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etActiveTab('quick')}&gt;Q</span>uick Estimate&lt;/button&gt;
+            &lt;button className={`tab-btn ${activeTab === 'custom' ? <span class="branch-0 cbranch-no" title="branch not covered" >'active' : '</span>'}`} <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etActiveTab('custom')}&gt;C</span>ustom Estimate&lt;/button&gt;
+          &lt;/div&gt;
+&nbsp;
+          &lt;div className="estimator-body"&gt;
+            {/* Inputs Panel */}
+            &lt;div className="estimator-inputs"&gt;
+              &lt;div className="input-group mb-4"&gt;
+                &lt;label&gt;Select Package&lt;/label&gt;
+                &lt;select className="form-control" value={selectedPkgId} onChange={e =&gt; setSelectedPkgId(e.target.value)}&gt;
+                  &lt;option value=""&gt;-- Select a Package --&lt;/option&gt;
+                  {config.packages.map(p =&gt; (
+                    &lt;option key={p.id} value={p.id}&gt;{p.name}&lt;/option&gt;
+                  ))}
+                &lt;/select&gt;
+                {pkg &amp;&amp; (
+                  &lt;div style={{ marginTop: '1rem', padding: '1.25rem', border: '1px solid var(--color-border)', borderRadius: '0.75rem', background: 'var(--color-surface)' }}&gt;
+                    &lt;h4 style={{ marginBottom: '0.5rem' }}&gt;
+                      &lt;FormattedPackageName name={pkg.name} index={pkgIndex} /&gt; Details
+                    &lt;/h4&gt;
+                    &lt;p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '1rem' }}&gt;{pkg.description}&lt;/p&gt;
+                    &lt;PackageDetails pkg={pkg} /&gt;
+                  &lt;/div&gt;
+                )}
+              &lt;/div&gt;
+&nbsp;
+              {activeTab === 'quick' &amp;&amp; (
+                &lt;div className="tab-content active"&gt;
+                  &lt;div className="input-group mb-4"&gt;
+                    &lt;label&gt;Total Built-up Area (sqft)&lt;/label&gt;
+                    &lt;input type="number" className="form-control" placeholder="e.g. 2400" min="0" value={quickArea} onChange={e =&gt; setQuickArea(e.target.value)} /&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              )}
+&nbsp;
+              {activeTab === 'custom' &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >                &lt;div className="tab-content active"&gt;</span>
+                  &lt;div id="floor-builder-wrapper" className="mb-4"&gt;
+                    &lt;label className="mb-2" style={{display: 'block', fontWeight: 500}}&gt;Floor-wise Builder&lt;/label&gt;
+                    &lt;div className="floor-list"&gt;
+                      {floors.<span class="fstat-no" title="function not covered" >map(f</span>loor =&gt; (
+<span class="cstat-no" title="statement not covered" >                        &lt;div key={floor.id} className="floor-item"&gt;</span>
+                          &lt;div className="floor-item-header"&gt;
+                            &lt;select className="form-control" style={{width: 'auto', padding: '0.25rem 0.5rem'}} value={floor.type} <span class="fstat-no" title="function not covered" >onChange={e</span> =&gt; <span class="cstat-no" title="statement not covered" >handleUpdateFloor(floor.id, 'type', e.target.value)}&gt;</span>
+                              &lt;option value="Basement"&gt;Basement&lt;/option&gt;
+                              &lt;option value="Ground Floor"&gt;Ground Floor&lt;/option&gt;
+                              &lt;option value="Floor 1"&gt;Floor 1&lt;/option&gt;
+                              &lt;option value="Floor 2"&gt;Floor 2&lt;/option&gt;
+                              &lt;option value="Floor 3"&gt;Floor 3&lt;/option&gt;
+                              &lt;option value="Terrace"&gt;Terrace&lt;/option&gt;
+                            &lt;/select&gt;
+                            &lt;button className="btn-remove" <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >h</span>andleRemoveFloor(floor.id)}&gt;✕</span> Remove&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div className="input-row"&gt;
+                            &lt;div className="input-group mb-0"&gt;
+                              &lt;label&gt;Length (ft)&lt;/label&gt;
+                              &lt;input type="number" className="form-control" min="0" placeholder="0" value={floor.length} <span class="fstat-no" title="function not covered" >onChange={e</span> =&gt; <span class="cstat-no" title="statement not covered" >handleUpdateFloor(floor.id, 'length', e.target.value)} /&gt;</span>
+                            &lt;/div&gt;
+                            &lt;div className="input-group mb-0"&gt;
+                              &lt;label&gt;Width (ft)&lt;/label&gt;
+                              &lt;input type="number" className="form-control" min="0" placeholder="0" value={floor.width} <span class="fstat-no" title="function not covered" >onChange={e</span> =&gt; <span class="cstat-no" title="statement not covered" >handleUpdateFloor(floor.id, 'width', e.target.value)} /&gt;</span>
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      ))}
+                    &lt;/div&gt;
+                    &lt;button className="btn-add-floor mb-4" onClick={handleAddFloor}&gt;+ Add Floor&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              )}
+&nbsp;
+              {/* Action Button to Explicitly Calculate and Scroll to Quote */}
+              &lt;div style={{ marginTop: '1.5rem', marginBottom: '1rem' }}&gt;
+                &lt;button 
+                  type="button" 
+                  className="btn btn-primary" 
+                  onClick={handleCalculate}
+                  style={{
+                    width: '100%', 
+                    padding: '0.9rem 1.5rem',
+                    fontSize: '1.05rem',
+                    fontWeight: 600,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem',
+                    boxShadow: '0 4px 15px rgba(249, 115, 22, 0.4)'
+                  }}
+                &gt;
+                  ⚡ Calculate Estimate &amp; View Quote
+                &lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+&nbsp;
+            {/* Quote Panel */}
+            &lt;div className={`quote-panel ${isPulsing ? <span class="branch-0 cbranch-no" title="branch not covered" >'pulse-active' : '</span>'}`} style={{
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              transform: isPulsing ? <span class="branch-0 cbranch-no" title="branch not covered" >'scale(1.03)' : '</span>scale(1)',
+              boxShadow: isPulsing ? <span class="branch-0 cbranch-no" title="branch not covered" >'0 0 30px rgba(249, 115, 22, 0.6)' : u</span>ndefined
+            }}&gt;
+              &lt;div className="quote-title"&gt;Estimated Cost&lt;/div&gt;
+              &lt;div className="quote-amount" style={{ transition: 'color 0.3s ease' }}&gt;
+                ₹{pkg &amp;&amp; totalArea &gt; 0 ? Math.round(totalCost).toLocaleString('en-IN') : '0'}
+              &lt;/div&gt;
+              &lt;div className="quote-details"&gt;
+                &lt;div className="quote-row total-area"&gt;
+                  &lt;span&gt;Built-up Area&lt;/span&gt;
+                  &lt;span&gt;{Math.round(totalArea).toLocaleString()} sqft&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div className="quote-row"&gt;
+                  &lt;span&gt;Package Selected&lt;/span&gt;
+                  &lt;span&gt;{pkg ? &lt;FormattedPackageName name={pkg.name} index={pkgIndex} /&gt; : '-'}&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div className="quote-row"&gt;
+                  &lt;span&gt;
+                    Package Rate&lt;br/&gt;
+                    &lt;small style={{ fontSize: '0.8rem', opacity: 0.8 }}&gt;(excl. GST)&lt;/small&gt;
+                  &lt;/span&gt;
+                  &lt;span&gt;{pkg ? `₹${pkg.displayStartingRate.toLocaleString('en-IN')} / sqft` : '-'}&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div className="quote-note"&gt;
+                &lt;strong style={{color: 'var(--color-accent)'}}&gt;*All prices mentioned are exclusive of GST.&lt;/strong&gt;&lt;br/&gt;
+                *Government charges like BESCOM, BWSSB, Borewell etc. will be additional and paid by the client.&lt;br/&gt;
+                *Please note: Interior works are not included as part of these packages.&lt;br/&gt;
+                *These estimate charges are subject to final discussion, agreement etc.
+              &lt;/div&gt;
+&nbsp;
+              {/* Lead Capture Form */}
+              {pkg &amp;&amp; totalArea &gt; 0 &amp;&amp; !leadSuccess &amp;&amp; (
+                &lt;div className="lead-form-container"&gt;
+                  &lt;hr style={{margin: '2rem 0', border: 'none', borderTop: '1px solid var(--color-border)'}} /&gt;
+                  &lt;h4&gt;Get a Detailed Consultation&lt;/h4&gt;
+                  &lt;p style={{fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '1.5rem'}}&gt;Enter your details below and we will contact you to discuss this estimate.&lt;/p&gt;
+                  
+                  &lt;form onSubmit={handleLeadSubmit} action="https://api.web3forms.com/submit" method="POST"&gt;
+                    &lt;input type="hidden" name="access_key" value="6452b31a-d5ee-4cd1-bbdd-a02db74b3e97" /&gt;
+                    
+                    &lt;div className="input-group"&gt;
+                      &lt;label&gt;Name *&lt;/label&gt;
+                      &lt;input type="text" name="Name" className="form-control" required value={leadName} <span class="fstat-no" title="function not covered" >onChange={e</span> =&gt; <span class="cstat-no" title="statement not covered" >setLeadName(e.target.value)} /&gt;</span>
+                    &lt;/div&gt;
+                    &lt;div className="input-row"&gt;
+                      &lt;div className="input-group"&gt;
+                        &lt;label&gt;Phone&lt;/label&gt;
+                        &lt;input type="tel" name="Phone" className="form-control" value={leadPhone} <span class="fstat-no" title="function not covered" >onChange={e</span> =&gt; { <span class="cstat-no" title="statement not covered" >setLeadPhone(e.target.value); <span class="cstat-no" title="statement not covered" >s</span>etLeadError(false); }</span>} /&gt;
+                      &lt;/div&gt;
+                      &lt;div className="input-group"&gt;
+                        &lt;label&gt;Email&lt;/label&gt;
+                        &lt;input type="email" name="Email" className="form-control" value={leadEmail} <span class="fstat-no" title="function not covered" >onChange={e</span> =&gt; { <span class="cstat-no" title="statement not covered" >setLeadEmail(e.target.value); <span class="cstat-no" title="statement not covered" >s</span>etLeadError(false); }</span>} /&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    {leadError &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >                      &lt;div style={{color: '#ef4444', fontSize: '0.875rem', marginBottom: '1rem'}}&gt;</span>
+                        Please provide either a Phone number or an Email address.
+                      &lt;/div&gt;
+                    )}
+&nbsp;
+                    &lt;div style={{marginTop: '1.5rem', marginBottom: '1.5rem', padding: '1rem', background: 'var(--color-surface)', borderRadius: '0.75rem', border: '1px solid var(--color-border)'}}&gt;
+                      &lt;label style={{display: 'block', marginBottom: '0.75rem', fontWeight: 500, lineHeight: 1.4}}&gt;
+                        How was your experience with our &lt;span style={{ color: 'var(--color-text-main)', fontWeight: 700 }}&gt;Build&lt;/span&gt; &lt;span style={{ color: 'var(--color-accent)', fontWeight: 700 }}&gt;Zen&lt;/span&gt; Estimator?
+                      &lt;/label&gt;
+                      &lt;div style={{display: 'flex', gap: '0.5rem', marginBottom: rating &gt; 0 ? <span class="branch-0 cbranch-no" title="branch not covered" >'1rem' : '</span>0'}}&gt;
+                        {[1, 2, 3, 4, 5].map(star =&gt; (
+                          &lt;svg 
+                            key={star} 
+<span class="fstat-no" title="function not covered" >                            onClick={() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etRating(star)}</span>
+                            style={{width: '28px', height: '28px', cursor: 'pointer', fill: star &lt;= rating ? <span class="branch-0 cbranch-no" title="branch not covered" >'#fbbf24' : '</span>#e5e7eb', transition: 'fill 0.2s'}}
+                            viewBox="0 0 20 20"
+                          &gt;
+                            &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /&gt;
+                          &lt;/svg&gt;
+                        ))}
+                      &lt;/div&gt;
+                      
+                      {rating &gt; 0 &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >                        &lt;textarea </span>
+                          className="form-control" 
+                          placeholder="Your message" 
+                          rows="2"
+                          value={feedback}
+<span class="fstat-no" title="function not covered" >                          onChange={e</span> =&gt; <span class="cstat-no" title="statement not covered" >setFeedback(e.target.value)}</span>
+                          name="Experience_Feedback"
+                          style={{marginBottom: '0'}}
+                        /&gt;
+                      )}
+                      &lt;input type="hidden" name="Experience_Rating" value={rating &gt; 0 ? <span class="branch-0 cbranch-no" title="branch not covered" >`${rating} Stars` : '</span>No rating given'} /&gt;
+                    &lt;/div&gt;
+&nbsp;
+                    {/* Hidden Fields Placed Here So They Appear Below Feedback In Email */}
+                    &lt;input type="hidden" name="Estimate_Package" value={pkg.name} /&gt;
+                    &lt;input type="hidden" name="Estimate_Area" value={`${totalArea} sqft`} /&gt;
+                    &lt;input type="hidden" name="Estimate_Total" value={`₹${Math.round(totalCost).toLocaleString('en-IN')}`} /&gt;
+                    &lt;textarea name="Floor_Breakdown" style={{display: 'none'}} value={floorBreakdownText} readOnly /&gt;
+                    &lt;textarea name="Package_Specifications" style={{display: 'none'}} value={packageDetailsText} readOnly /&gt;
+&nbsp;
+                    &lt;button type="submit" className="btn btn-primary" style={{width: '100%'}} disabled={isSubmitting}&gt;
+                      {isSubmitting ? <span class="branch-0 cbranch-no" title="branch not covered" >'Sending Request...' : '</span>Request Consultation'}
+                    &lt;/button&gt;
+                  &lt;/form&gt;
+                &lt;/div&gt;
+              )}
+              {leadSuccess &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >                &lt;div style={{textAlign: 'center', color: '#10b981', fontWeight: 500, marginTop: '1.5rem'}}&gt;</span>
+                  Thank you! We have received your request and will be in touch shortly.
+                &lt;/div&gt;
+              )}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+&nbsp;
+      {/* Mobile &amp; Desktop Floating Bottom Sticky Bar */}
+      {pkg &amp;&amp; totalArea &gt; 0 &amp;&amp; (
+        &lt;div className="sticky-bottom-quote-bar"&gt;
+          &lt;div className="sticky-quote-info"&gt;
+            &lt;span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', display: 'block' }}&gt;Estimated Cost (excl. GST)&lt;/span&gt;
+            &lt;strong style={{ fontSize: '1.25rem', color: 'var(--color-accent)' }}&gt;
+              ₹{Math.round(totalCost).toLocaleString('en-IN')}
+            &lt;/strong&gt;
+          &lt;/div&gt;
+          &lt;button 
+            type="button" 
+            className="btn btn-primary" 
+            onClick={handleCalculate}
+            style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', fontWeight: 600 }}
+          &gt;
+            View Full Quote ➔
+          &lt;/button&gt;
+        &lt;/div&gt;
+      )}
+    &lt;/section&gt;
+  );
+}
+&nbsp;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-08-22T11:28:52.225Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

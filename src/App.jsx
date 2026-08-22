@@ -77,6 +77,7 @@ function App() {
             <div className="footer-col">
               <h4>Contact Us</h4>
               <p>✉️ info@buildzen.in</p>
+              <p>📞 +91 7676514415</p>
             </div>
             <div className="footer-col">
               <h4>Quick Links</h4>
