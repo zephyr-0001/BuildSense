@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import Packages from './components/Packages';
 import Estimator from './components/Estimator';
+import Projects from './components/Projects';
 import BackgroundPattern from './components/BackgroundPattern';
 import { BuildZenConfig } from './data/config';
 
@@ -41,6 +42,7 @@ function App() {
           <div className="nav-links">
             <a onClick={() => navigateTo('home')} className={currentPage === 'home' ? 'active' : ''} style={{ cursor: 'pointer' }}>Home</a>
             <a onClick={() => navigateTo('packages')} className={currentPage === 'packages' ? 'active' : ''} style={{ cursor: 'pointer' }}>Packages</a>
+            <a onClick={() => navigateTo('projects')} className={currentPage === 'projects' ? 'active' : ''} style={{ cursor: 'pointer' }}>Projects</a>
             <a onClick={() => navigateTo('estimator')} className={currentPage === 'estimator' ? 'active' : ''} style={{ cursor: 'pointer' }}>Build Estimator</a>
             <button 
               onClick={toggleTheme} 
@@ -63,6 +65,7 @@ function App() {
       <main>
         {currentPage === 'home' && <Hero navigateTo={navigateTo} />}
         {currentPage === 'packages' && <Packages navigateTo={navigateTo} config={BuildZenConfig} />}
+        {currentPage === 'projects' && <Projects />}
         {currentPage === 'estimator' && <Estimator config={BuildZenConfig} />}
       </main>
 
@@ -85,6 +88,7 @@ function App() {
               <h4>Quick Links</h4>
               <p><a onClick={() => navigateTo('home')} style={{ cursor: 'pointer' }}>Home</a></p>
               <p><a onClick={() => navigateTo('packages')} style={{ cursor: 'pointer' }}>Packages</a></p>
+              <p><a onClick={() => navigateTo('projects')} style={{ cursor: 'pointer' }}>Projects</a></p>
               <p><a onClick={() => navigateTo('estimator')} style={{ cursor: 'pointer' }}>Get an Estimate</a></p>
             </div>
           </div>
