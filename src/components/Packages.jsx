@@ -71,7 +71,7 @@ function PackageCard({ pkg, index, navigateTo }) {
       <button className="btn btn-outline" onClick={() => {
         localStorage.setItem('selectedPackage', pkg.id);
         navigateTo('estimator');
-      }}>Estimate with this</button>
+      }}>Estimate with {pkg.name}</button>
     </div>
   );
 }

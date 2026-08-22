@@ -18,7 +18,7 @@ const mockConfig = {
 describe('Packages Component', () => {
   it('renders package cards correctly', () => {
     render(<Packages config={mockConfig} navigateTo={() => {}} />);
-    expect(screen.getByText(/CLASSIC HORIZON/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/CLASSIC HORIZON/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/Test description/i)).toBeInTheDocument();
   });
 });
